@@ -19,7 +19,7 @@
       "kind": "educational-diagram-not-portal",
       "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
       "officialIconSet": "Azure Public Service Icons V24",
-      "sha256": "c402e8fa529e22ef73dfa3ad9a947af1e452dae90448779928ae2ebf1b8b04d1",
+      "sha256": "4b75488ffd056fa4a75eec99355147b7f74b381d65e92327b500f524d8feed9a",
       "editableSource": "revisions.excalidraw"
     },
     "portal/01-create-menu.png": {
@@ -241,6 +241,7 @@
     "09-new-100",
     "10-rollback-old-100",
     "11-delete-confirmation",
-    "12-deletion-complete"
+    "12-deletion-complete",
+    "portal/00-rg-create.png"
   ]
 }

@@ -55,7 +55,7 @@
       "kind": "educational-diagram-not-portal",
       "officialIconSet": "Azure Public Service Icons V24",
       "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
-      "sha256": "ef76d2ce4b500c9567d1b18b4203601bb56f4c303d020cd34528677733fcf0b4",
+      "sha256": "b81e2c018f94b78d06e4cbf264321019a2857a9b6dcc4c7927d6998e4d8d47c8",
       "editableSource": "vm-resources.excalidraw"
     },
     "portal/01-create-entry.png": {
@@ -246,5 +246,8 @@
       "annotations": [],
       "sha256": "9a722b90f6714687bf2dad805d40742abb643399d23184e999fe29acec656117"
     }
-  }
+  },
+  "pendingScreenshots": [
+    "portal/00-rg-create.png"
+  ]
 }

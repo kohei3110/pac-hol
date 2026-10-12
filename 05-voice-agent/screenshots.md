@@ -15,8 +15,8 @@
 | `assets/portal/02-foundry-basics-detail.png` | 同じ画面の入力欄を拡大。RG、リソース名、リージョンに番号と枠を追加 |
 | `assets/portal/03-default-project-detail.png` | 同じ画面の最初のプロジェクト名を拡大。入力欄に番号と枠を追加 |
 
-Portalの画像は講師が準備する場所の参考です。
-画像の既定リージョンとプロジェクト名は、実習で使う値とは違います。本文と講師の案内を使ってください。
+Portalの画像はTask 2で本人がFoundryリソースとプロジェクトを作る場所の参考です。
+画像の既定リージョンとプロジェクト名は、今回の入力値とは違います。本文の自分の控えを使ってください。
 このフォームからリソースを作ったわけではなく、音声エージェントの設定画面でもありません。
 追加した二枚は、一枚の実スクショから切り出した拡大画像です。新しく二つの工程を撮影したわけではありません。
 元画像のSHA、切り出した位置、引き継いだマスク、番号と枠の位置もmanifestに残しています。
@@ -31,16 +31,18 @@ Portalの画像は講師が準備する場所の参考です。
 
 | Task | 追加する画面 | 画像で示す場所 |
 | --- | --- | --- |
-| 1 | プロジェクトを開いたAgents一覧 | プロジェクト名の位置、Agents、Build an agent |
-| 2 | Create an agent | Agent name、Interaction modeのVoice、作成ボタン |
-| 3 | Instructions | 指示を貼る欄、Save、保存した版 |
-| 4 | AI modelとVoiceの選択 | Managedのモデル、日本語の声 |
-| 5 | Advanced settings | Azure Speech、Japanese、Azure semantic、適用ボタン |
-| 6 | Playgroundの接続前とマイク許可 | マイク・出力先、Start、ブラウザーの許可 |
-| 7〜8 | 会話中のPlayground | 自分の文字起こし、返答、End |
-| 9〜10 | 変更後の指示と会話 | 新しい版、変更後の話し始め |
-| 11 | Agentの削除と一覧 | 対象名、削除ボタン、削除後の一覧 |
-| 12 | Azure Portalの専用RG | 削除する対象、削除後の検索結果 |
+| 1 | Azure PortalのRG作成 | 自分のサブスクリプション、識別名、タグ、空の一覧 |
+| 2〜3 | 作成後のFoundryリソース・プロジェクト | 自分の名前、Entra、ID、ネットワーク、プロジェクト単位の権限 |
+| 4 | プロジェクトを開いたAgents一覧 | プロジェクト名の位置、Agents、Build an agent |
+| 5 | Create an agent | Agent name、Interaction modeのVoice、作成ボタン |
+| 6 | Instructions | 指示を貼る欄、Save、保存した版 |
+| 7 | AI modelとVoiceの選択 | Managedのモデル、日本語の声 |
+| 8 | Advanced settings | Azure Speech、Japanese、Azure semantic、適用ボタン |
+| 9 | Playgroundの接続前とマイク許可 | マイク・出力先、Start、ブラウザーの許可 |
+| 10〜11 | 会話中のPlayground | 自分の文字起こし、返答、End |
+| 12〜13 | 変更後の指示と会話 | 新しい版、変更後の話し始め |
+| 14 | Agentの削除と一覧 | 対象名、削除ボタン、削除後の一覧 |
+| 15〜16 | Azure Portalの専用RG | 自分の対象、削除後のRG・Foundry・プロジェクト検索 |
 
 これらのFoundry操作画面は、まだ撮影できていません。
 撮影用のブラウザーがサインイン前、またはセッション期限切れになっているため、再度ログインしてから追加します。

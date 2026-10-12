@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "icons": {
     "virtual-network": {
       "label": "Azure Virtual Networks",
@@ -313,11 +313,43 @@
     }
   },
   "pendingScreenshots": [
+    "cloud-shell/01-source-upload.png",
+    "cloud-shell/02-owned-prepare.png",
+    "portal/00-rg-create.png",
     "portal/03-container-private.png",
     "portal/04-identity-rbac.png",
     "portal/05-private-endpoint-dns.png",
     "portal/06-app-ingress.png",
     "portal/07-delete-confirmation.png",
-    "portal/08-deletion-complete.png"
-  ]
+    "portal/08-deletion-complete.png",
+    "portal/09-acr-build-run.png",
+    "portal/10-owned-app-deployment.png"
+  ],
+  "packages": {
+    "handson04-self-study.zip": {
+      "kind": "learner-source-and-iac-bundle",
+      "sha256": "9bcce2495f62214a048103375f41dad0a458fac152c6b56b21ac636deb698d31",
+      "files": {
+        "README.md": "d49513c268eb14184704e02cafdf58ace3372f925f91c4c6e7145ef3f30988b7",
+        "app/.dockerignore": "b579f63d13c980a61b0bd270b11350a7a0e455f89c604d5d03d84a13af90e324",
+        "app/Dockerfile": "4210936adf1324be090f75235d4bdbb8b32cb880994d2b2fd88dac20d78efb2e",
+        "app/blob_viz/__init__.py": "21d0055d5e9909b61d25d7ef2ddad8e375935113743ebd86de403f44ae0830c1",
+        "app/blob_viz/data.py": "5dffb54651c5368016dc0fe87dede77c3ec2575d88b7b66979d9ade4b457b01d",
+        "app/blob_viz/samples/invalid-columns.csv": "8c1bf7317ef774ef87269c5456347fcb627c2bbe9cc43affe1da16c3436ad2f3",
+        "app/blob_viz/samples/monthly-sales-updated.csv": "3d6f411759681ed7aea21474ca7b8cd6f61538b610b7445fa852dae593cc1bc1",
+        "app/blob_viz/samples/monthly-sales.csv": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4",
+        "app/blob_viz/static/app.js": "4169bdfde1e6808cdd7ed80dccc433d60547e95451a4d3be376282a3b5f07235",
+        "app/blob_viz/storage.py": "846bf0e604344d48e1a2befb93195efa35c6675655c504c74ae386c2cd485330",
+        "app/blob_viz/templates/index.html": "4d9beade8c720ec24a06aa282a93d78c0a610e6d79440b400a8bbdda8ba416e4",
+        "app/blob_viz/verify.py": "27878227542b7dd41f38c47cf722c9d78ffe83b0cfa3d3865fd106a7ec5ff191",
+        "app/gunicorn.conf.py": "438f3c6688a60ef19d5ba0182cc839f8960831e63236b514d4f2e36dda52125c",
+        "app/requirements.txt": "48549aa855cd08010a61e54374748660bf2a662d59279cc4bfb4169268988859",
+        "infra/handson04-app.bicep": "12b6649cc66ee9b322d5be28439e79a69e52df00a4f3d5c7e6e92ea58203988b",
+        "infra/handson04-resources.bicep": "df78f64899246d5e6aa4b1bdabc524dab4767f004d85c55aa247e0acfeb9e505",
+        "infra/handson04-self-study.bicep": "cedfe525406e763d91e5339ada95857ba4ef54398ec65a83b83efe42f414c503",
+        "setup_lab.py": "a2eec85c5d5a97a53edde9adcfa6b462df3154d4513162bc26c6fb9f3142833b"
+      },
+      "containsPredeployedResourcesOrCredentials": false
+    }
+  }
 }

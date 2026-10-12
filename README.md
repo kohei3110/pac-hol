@@ -1,30 +1,53 @@
-# Azureハンズオン — 全5回
+# Azureハンズオン — 座学後に進める全5回の自習
 
-座学で学んだ構成を、Azureの画面を触りながら確かめるハンズオンです。
-VMを作るところから始めて、接続、アプリの更新、ファイルの保存、音声AIの作成へ進みます。使い終わったものを片付けるところまで、各回の手順に入れています。
+座学で聞いたサービスを、実際に作って確かめるための手順書です。
+**Microsoftから付与されたAzureサブスクリプションを使い、各回の座学後に自分のペースで進めます。**
+講師が準備するのはサブスクリプションの案内と教材だけです。RG・アプリ・ネットワーク・Foundryプロジェクトを事前に作って配る方式ではありません。
+
+毎回、参加者本人が、個人識別名を使って新しいRGとリソースを作り、終わったら削除します。
+まず[共通の始め方・名前・権限](self-study.md)を読んでください。
+例の`ksaito73`は、自分のイニシャルやニックネームに数字を足した識別名へ置き換えます。
+
+更新日: 2026-10-13。Portalだけの全工程、まだ撮影できていない画面、初学者の試行は各回の実施記録に分けています。
 
 ## 各回の資料
 
-ブラウザーで読む場合はHTML、印刷して配る場合はPDFを使ってください。HTMLには画像とチェック欄を埋め込んであるので、オフラインでも読めます。
+ブラウザーで読むならHTML、印刷するならPDFを使ってください。HTMLは画像・チェック欄・配布データを内蔵しています。
 
-| 回 | 内容 | 参加者用 | 講師用・実施記録 |
+| 回 | 内容 | 参加者用 | 講師向け・記録 |
 | --- | --- | --- | --- |
-| 1 | VMを作って、Azureの基本操作を覚える | [Markdown](01-vm/guide.md) ／ [HTML](01-vm/guide.html) ／ [PDF](01-vm/guide.pdf) | [講師資料](01-vm/instructor-guide.md) ／ [実施記録](01-vm/run-through.md) ／ [画像の出典](01-vm/screenshots.md) |
-| 2 | Bastionを使ってVMにログインする | [Markdown](02-bastion/guide.md) ／ [HTML](02-bastion/guide.html) ／ [PDF](02-bastion/guide.pdf) | [講師資料](02-bastion/instructor-guide.md) ／ [実施記録](02-bastion/run-through.md) ／ [画像の出典](02-bastion/screenshots.md) |
-| 3 | 新しい版を試してから、アプリを切り替える | [Markdown](03-containerapps/guide.md) ／ [HTML](03-containerapps/guide.html) ／ [PDF](03-containerapps/guide.pdf) | [講師資料](03-containerapps/instructor-guide.md) ／ [実施記録](03-containerapps/run-through.md) ／ [画像の出典](03-containerapps/screenshots.md) |
-| 4 | CSVをBlobに保存して、表とグラフで見る | [Markdown](04-blob/guide.md) ／ [HTML](04-blob/guide.html) ／ [PDF](04-blob/guide.pdf) | [講師資料](04-blob/instructor-guide.md) ／ [実施記録](04-blob/run-through.md) ／ [画像の出典](04-blob/screenshots.md) |
-| 5 | Foundryで日本語の音声AIエージェントを作る | [Markdown](05-voice-agent/guide.md) ／ [HTML](05-voice-agent/guide.html) ／ [PDF](05-voice-agent/guide.pdf) | [講師資料](05-voice-agent/instructor-guide.md) ／ [実施記録](05-voice-agent/run-through.md) ／ [画像の出典](05-voice-agent/screenshots.md) |
+| 1 | VMの作成、状態確認、停止、削除 | [Markdown](01-vm/guide.md) ／ [HTML](01-vm/guide.html) ／ [PDF](01-vm/guide.pdf) | [案内](01-vm/instructor-guide.md) ／ [実施記録](01-vm/run-through.md) ／ [画像](01-vm/screenshots.md) |
+| 2 | Bastionで非公開VMへログインする | [Markdown](02-bastion/guide.md) ／ [HTML](02-bastion/guide.html) ／ [PDF](02-bastion/guide.pdf) | [案内](02-bastion/instructor-guide.md) ／ [実施記録](02-bastion/run-through.md) ／ [画像](02-bastion/screenshots.md) |
+| 3 | 新版を先に試し、同じURLを切り替える | [Markdown](03-containerapps/guide.md) ／ [HTML](03-containerapps/guide.html) ／ [PDF](03-containerapps/guide.pdf) | [案内](03-containerapps/instructor-guide.md) ／ [実施記録](03-containerapps/run-through.md) ／ [画像](03-containerapps/screenshots.md) |
+| 4 | 自分のアプリを展開し、Blobへ保存して表示する | [Markdown](04-blob/guide.md) ／ [HTML](04-blob/guide.html) ／ [PDF](04-blob/guide.pdf) | [案内](04-blob/instructor-guide.md) ／ [実施記録](04-blob/run-through.md) ／ [画像](04-blob/screenshots.md) |
+| 5 | 自分のFoundryを作り、日本語の音声AIを試す | [Markdown](05-voice-agent/guide.md) ／ [HTML](05-voice-agent/guide.html) ／ [PDF](05-voice-agent/guide.pdf) | [案内](05-voice-agent/instructor-guide.md) ／ [実施記録](05-voice-agent/run-through.md) ／ [画像](05-voice-agent/screenshots.md) |
 
-## 全5回の構成案
+## 何を自分で作るか
 
-| 回 | 内容・所要時間 | 実際に試すこと | 準備・費用の注意 | 資料 |
-| --- | --- | --- | --- | --- |
-| **1** | VMの基本操作・60分 | Ubuntu VMを1台作り、ディスクやネットワークを見ます。停止したあと、専用RGを削除します。 | 学習用サブスクリプションを使用。公開IP・SSH/RDP・Bastionはなし。VMとディスクには料金がかかります。 | [手順書](01-vm/guide.md) |
-| **2** | Bastionでの接続・75〜90分 | VNet・VM・Bastion Basicを作り、ブラウザーでログインします。最後に専用RGを削除します。 | VMの公開IPはなし。Bastion専用/26サブネットとRSA鍵を使用。Bastionと公開IPも削除が必要です。 | [手順書](02-bastion/guide.md) |
-| **3** | アプリの更新・切り替え・60〜75分 | Multipleで旧版100%に固定し、previewで新版を試します。同じURLを新版、旧版へ切り替え、専用RGを削除します。 | Microsoftの公開イメージ2版とConsumptionを使用。各版は最小0／最大1。秘密値は入れず、ビルド・ACR・Jobsは扱いません。 | [手順書](03-containerapps/guide.md) |
-| **4** | Blobへの保存・表とグラフ・45〜60分 | 架空CSVを保存し、読み直した表・グラフを見ます。開き直し、比較CSV、不正入力、削除も試します。 | 講師がアプリ・MI・コンテナー単位RBAC・PEを準備。鍵・SASは配らず、64 KiB／24行／10件まで。SQL・Redisは作りません。 | [手順書](04-blob/guide.md) |
-| **5** | **Foundry Voice Agentの作成・日本語会話**・60〜75分 | Voiceを選んで作り、指示・モデル・声を保存。日本語で会話し、End後に指示を変えて比較。会話・Agentを削除し基盤の終了を確認 | 講師が専用プロジェクト・Foundry User・Voiceプレビュー・対応モデルを準備。Managed、録音標準オフ、合計10分以内の会話試行。電話・アバター・外部操作なし | [手順書](05-voice-agent/guide.md) |
+| 回 | 本人が作成・確認・削除するもの | 時間の目安 |
+| --- | --- | --- |
+| 1 | RG、Ubuntu VM、ディスク、VNet/NIC/NSG、SSHキー。公開IP・公開ポートなし | 60〜75分 |
+| 2 | 新しいRG、VNet、VM、鍵、NSG、Bastion Basicと公開IP。接続を切るだけで終わらずRG削除 | 75〜90分＋予備15分 |
+| 3 | RG、Consumption環境、Container App、旧版・新版。MCRの公開サンプルを使用 | 60〜75分＋予備15分 |
+| 4 | RG、Storage、uploads、MI/RBAC、ACR、VNet/PE/DNS、環境、Container App。配布ソースを本人のACRでビルド | 120〜150分＋削除待ち30分程度 |
+| 5 | RG、Foundryリソース、プロジェクト、データ権限、Voice。Managedモデルで会話し、指示を変えて比較 | 90〜120分＋予備15分 |
 
-前の回のリソースは残さなくて構いません。
+前の回のRGは使い回しません。第4回のビルド用[作成ファイル一式](04-blob/assets/handson04-self-study.zip)も教材として配布します。
+それはソースと設定であって、講師が展開済みのアプリやリソースではありません。
 
-なお、この教材はMicrosoftの公式教材・認定教材ではありません。
+第4・5回ではRBACのロール割り当ても本人が行います。Contributorだけでは通常できないため、付与環境の権限を先に確認してください。
+費用、利用期限、地域の制限もMicrosoftからの案内に従います。
+
+## 読み方と、まだ残っている確認
+
+画像は設定欄を探すために使い、入力値は本文の表を見てください。以前の画像の`p01`などをそのまま使う必要はありません。
+HTMLでは画像をクリックすると拡大できます。
+
+実Azureで試したこと、作成前のフォームだけを撮ったこと、独自に描いた図は別に記録しています。
+第4回の新しい本人構築フロー、第5回のPortal作成・人のマイク会話など、実施できていない部分は完了扱いにしません。
+初学者に手順書だけで試してもらい、時間や迷った箇所をもう一度見直す必要があります。
+
+本文・図は、このコースのために新しく作成しています。
+構成は[指定のAzure Functionsハンズオン](https://github.com/kohei3110/Serverless-Computing-using-Azure-Functions)の事前準備／Exercise／Taskを参考にし、
+製品アイコンは[Microsoft公式配布版](https://learn.microsoft.com/en-us/azure/architecture/icons/)を使用しています。
+この教材はMicrosoftの公式教材・認定教材ではありません。

@@ -10,7 +10,8 @@
 
 ## 確認の進め方
 
-主催者が許可した新しいプロジェクトを使います。
+Microsoftから付与された検証用サブスクリプションで、自分のRG・Foundryリソース・プロジェクトを新しく作ります。
+参加者向けの準備済み環境を残すための検証ではありません。自分の個人識別名とタグで対象を確認し、最後に自分で削除します。
 作成・接続・読取・削除の書き方は、[公式Python Quickstart](https://learn.microsoft.com/azure/foundry/agents/quickstarts/prompt-voice-agent?pivots=python)を参照してください。
 
 今回の確認では、文字を入力して声を出すのではなく、合成した日本語音声そのものを送っています。

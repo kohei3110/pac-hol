@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12T17:48:54.936741+00:00",
+  "method": "Read-only subscription ARM wrapper invokes the exact participant RG-scope Bicep module; no RG or service is created",
+  "preflightPassed": true,
+  "armValidation": "Succeeded",
+  "plannedCreates": 14,
+  "plannedChangesOnlyInPersonalScope": true,
+  "newResourceGroupAbsentAfterPreview": true,
+  "cloudResourcesCreated": false,
+  "templatesSha256": {
+    "handson04-self-study.bicep": "cedfe525406e763d91e5339ada95857ba4ef54398ec65a83b83efe42f414c503",
+    "handson04-resources.bicep": "df78f64899246d5e6aa4b1bdabc524dab4767f004d85c55aa247e0acfeb9e505",
+    "handson04-app.bicep": "12b6649cc66ee9b322d5be28439e79a69e52df00a4f3d5c7e6e92ea58203988b"
+  },
+  "actualPackagedBuildDeploy": "not-executed-awaiting-creation-consent",
+  "cloudShellBrowserRun": "not-executed",
+  "portalRunThrough": "not-executed",
+  "firstTimeLearnerTest": "not-executed"
+}

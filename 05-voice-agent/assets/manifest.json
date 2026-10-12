@@ -43,7 +43,7 @@
       "kind": "educational-diagram-not-portal",
       "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
       "officialIconSet": "Azure Public Service Icons V24",
-      "sha256": "1f4c92faabe23893e492d31d6fba35ddcaf9bc254f859b2bcc3679fe97fd0f13",
+      "sha256": "3b27e489db5b547f1ff8d8c4efd5accea3d5b2019a407f7e03458d5df0213c36",
       "editableSource": "voice-flow.excalidraw"
     },
     "voice-results.png": {
@@ -174,6 +174,7 @@
     }
   },
   "pendingScreenshots": [
+    "foundry/00-project-permissions.png",
     "foundry/01-project-agents.png",
     "foundry/02-create-voice.png",
     "foundry/03-instructions-model-voice.png",
@@ -183,6 +184,8 @@
     "foundry/07-saved-new-version.png",
     "foundry/08-updated-conversation.png",
     "foundry/09-end-delete.png",
+    "portal/00-rg-create.png",
+    "portal/04-owned-foundry-resource.png",
     "portal/10-deletion-complete.png"
   ]
 }

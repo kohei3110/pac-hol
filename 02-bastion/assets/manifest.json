@@ -67,7 +67,7 @@
       "kind": "educational-diagram-not-portal",
       "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
       "officialIconSet": "Azure Public Service Icons V24",
-      "sha256": "06b01558adc03697d493342df08922990e2b799f2f068e81875f016cb0c48785",
+      "sha256": "143917b4cd82390330485a3bb1914720fdb049896b231b85c471987088a3703d",
       "editableSource": "bastion-path.excalidraw"
     },
     "portal/02-bastion-create.png": {
@@ -222,6 +222,7 @@
     "08-guest-commands",
     "09-resource-list",
     "10-delete-confirmation",
-    "11-deletion-complete"
+    "11-deletion-complete",
+    "portal/00-rg-create.png"
   ]
 }
