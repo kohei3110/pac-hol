@@ -1,0 +1,22 @@
+{
+  "retrieved": "2026-10-12",
+  "source": "https://prices.azure.com/api/retail/prices",
+  "region": "japaneast",
+  "currency": "USD",
+  "plan": "Consumption workload profile",
+  "retailMeterSkuName": "Standard",
+  "rates": {
+    "activeVcpuPerSecond": 0.000024,
+    "activeGiBPerSecond": 0.000003,
+    "perMillionRequests": 0.4
+  },
+  "example": {
+    "activeReplicas": 2,
+    "vcpusPerReplica": 0.25,
+    "gibPerReplica": 0.5,
+    "seconds": 3600,
+    "computeAndMemorySubtotal": 0.054
+  },
+  "excluded": ["monthly free grants", "HTTP request fees", "additional services", "taxes", "currency conversion"],
+  "notACapOrInvoice": true
+}

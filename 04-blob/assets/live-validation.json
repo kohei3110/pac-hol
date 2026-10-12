@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-12T06:52:36.392256+00:00",
+  "method": "Actual HTTPS upload/read/download through Container Apps and managed identity to private Blob",
+  "checks": {
+    "upload201": true,
+    "uploadAcknowledgesBlob": true,
+    "uploadedShaMatches": true,
+    "readFromBlob": true,
+    "sixRows": true,
+    "total1020": true,
+    "max240": true,
+    "etagPresent": true,
+    "noStore": true,
+    "downloadBytesExact": true,
+    "newBrowserStillReads": true,
+    "sameFilenameNotOverwrite": true,
+    "secondTotal1080": true,
+    "secondMax300": true,
+    "oldFileUnchanged": true,
+    "invalidRejected400": true,
+    "invalidNotStored": true,
+    "missingCsrfRejected403": true,
+    "storagePublicDisabled": true,
+    "sharedKeyDisabled": true,
+    "anonymousDisabled": true,
+    "privateEndpointApproved": true,
+    "onlyExpectedClient32": true,
+    "independentBytesAndPrivateDns": true
+  },
+  "behaviorPassed": true,
+  "cleanupVerified": true,
+  "portalRunThrough": "not-executed",
+  "firstTimeLearnerTest": "not-executed",
+  "fixtureSha256": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4",
+  "firstFile": {
+    "id": "file-01",
+    "size": 84,
+    "rowCount": 6,
+    "total": 1020
+  },
+  "secondFile": {
+    "id": "file-02",
+    "total": 1080
+  },
+  "independentBlobRead": {
+    "verified": true,
+    "source": "independent-azure-blob-read",
+    "sha256": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4",
+    "size": 84,
+    "etagPresent": true,
+    "privateDnsResolved": true,
+    "rowCount": 6,
+    "total": 1020
+  },
+  "serviceManagedGroupCleanupVerified": true,
+  "cleanupConfirmedAt": "2026-10-12T07:53:24.414006+00:00"
+}

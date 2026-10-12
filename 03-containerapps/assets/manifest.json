@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-12",
+  "icons": {
+    "container-apps": {
+      "label": "Azure Container Apps",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/other/02884-icon-service-Worker-Container-App.svg",
+      "svg": "svg/container-apps.svg",
+      "png": "png/container-apps.png",
+      "svgSha256": "b53c7e6b7af75b25c04231a7dff85074f0c32cc1c306376350c0c8df0cb64417",
+      "pngSha256": "f3e54599c2c5ce9f73ced34fa80de2a2ff941643413fdfac515c83ba76ac9fb9",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    }
+  },
+  "images": {
+    "revisions.png": {
+      "kind": "educational-diagram-not-portal",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "sha256": "c402e8fa529e22ef73dfa3ad9a947af1e452dae90448779928ae2ebf1b8b04d1",
+      "editableSource": "revisions.excalidraw"
+    },
+    "portal/01-create-menu.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "genuine Container Apps Create menu; no deployment or traffic change shown",
+      "cropSourcePixels": [
+        0,
+        255,
+        1350,
+        700
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            30,
+            130,
+            1250,
+            175
+          ],
+          "reason": "signed-in directory display"
+        }
+      ],
+      "annotations": [],
+      "sha256": "37d181d6fea300ec1e2813468b0e435ac7a9e7489588ad129d29185590e39bb9"
+    },
+    "http-results.png": {
+      "kind": "verified-http-response-excerpt-not-screenshot",
+      "sourceProof": "live-validation.json",
+      "sourceMethod": "ARM deployment plus Azure CLI and actual HTTPS responses; not Portal UI operations",
+      "stages": [
+        "initial-old",
+        "old-during-preview",
+        "new-preview",
+        "main-new",
+        "main-rollback"
+      ],
+      "sha256": "854d82856fe432abb6c008cf44f3d5bc6bdab953e2d8e3d4f0adbd2277fcc234",
+      "retained": [
+        "commit",
+        "revision suffix",
+        "HTTP status",
+        "consecutive-response count"
+      ]
+    },
+    "portal/02a-consumption.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "new Container Apps environment form containing only the Consumption workload profile before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 2"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        460,
+        1460,
+        950
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "0171933c3b48ba679e18bb6586eb6f8c17beaeb95eeff245555c1221b2edb48b"
+    },
+    "portal/02b-log-destination.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "new Container Apps environment form with Don't save logs selected before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 2"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        490,
+        1460,
+        890
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "c647a09f9ab0cdfc0934f9426aed2d36134be144855155911e21901b1ecb3f05"
+    },
+    "portal/03a-public-image.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Container App creation form selecting public MCR sample fb699ef before deployment; not a revision update",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        710,
+        1510,
+        1510
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "b5c5996cdd53512430d909762f3837ea6a7b5b48894063f3e59ecc3ca5fc65d4"
+    },
+    "portal/03b-cpu-and-env.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Container App creation form with 0.25 vCPU, 0.5 GiB and nonsecret REVISION_COMMIT_ID before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        1100,
+        1510,
+        1610
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "01ff0efb835eadd2e61a74ce47e45d67fda29b9160dfe8d7456f738cf68f816a"
+    },
+    "portal/03c-ingress.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Container App creation form with external HTTP ingress, target port 80 and insecure access disabled before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        730,
+        1510,
+        1580
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "1f697d5fd75ccd580c5f4b1fa4d42bbad5bd916f42d4ef32f951933ac31a8986"
+    }
+  },
+  "pendingScreenshots": [
+    "02-environment",
+    "03-old-container",
+    "04-deployment-complete",
+    "05-old-response",
+    "06-multiple-old-pinned",
+    "07-new-revision",
+    "08-preview-new",
+    "09-new-100",
+    "10-rollback-old-100",
+    "11-delete-confirmation",
+    "12-deletion-complete"
+  ]
+}

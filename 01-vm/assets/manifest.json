@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-12",
+  "icons": {
+    "resource-group": {
+      "label": "Azure Resource Groups",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "svg": "svg/resource-group.svg",
+      "png": "png/resource-group.png",
+      "svgSha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977",
+      "pngSha256": "8d25d44e466022356fc3b2c843be4187b7d3bc68c8639f0d6da156d133dc6075",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "virtual-machine": {
+      "label": "Azure Virtual Machine",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/compute/10021-icon-service-Virtual-Machine.svg",
+      "svg": "svg/virtual-machine.svg",
+      "png": "png/virtual-machine.png",
+      "svgSha256": "092d18ffadec9ec0e5af129186dc7bc2a80544011e55f965604ed4b13873e0fc",
+      "pngSha256": "d0ddfe62c5539f60b7361c74004796d9e1280d80e53d557231b1a246ede35c10",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "managed-disk": {
+      "label": "Azure Managed Disks",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/compute/10032-icon-service-Disks.svg",
+      "svg": "svg/managed-disk.svg",
+      "png": "png/managed-disk.png",
+      "svgSha256": "7ab5cc684d995ff898448b32424a55bbb5c6669a83a0bb7c547047fec21f292f",
+      "pngSha256": "bb0cdf3f52bbf96b7adf37121ea36f735e26747be135b02b3b1d0cd70d56872a",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "virtual-network": {
+      "label": "Azure Virtual Networks",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "svg": "svg/virtual-network.svg",
+      "png": "png/virtual-network.png",
+      "svgSha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d",
+      "pngSha256": "93c7edb3e0fa962591edb98e32a6d60f08c8d6e585a71c686f647e205228ff10",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    }
+  },
+  "images": {
+    "vm-resources.png": {
+      "kind": "educational-diagram-not-portal",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "sha256": "ef76d2ce4b500c9567d1b18b4203601bb56f4c303d020cd34528677733fcf0b4",
+      "editableSource": "vm-resources.excalidraw"
+    },
+    "portal/01-create-entry.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-11",
+      "state": "creation wizard before deployment; not evidence of successful creation",
+      "cropSourcePixels": [
+        0,
+        255,
+        1530,
+        1746
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            555,
+            835,
+            1460,
+            890
+          ],
+          "reason": "subscription display name"
+        }
+      ],
+      "annotations": [],
+      "sha256": "6d5cbf308c8298c8e8a942bce6e27be051e3a925a29e386a8837c68c41603c34"
+    },
+    "portal/02-basics-os-size.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "VM creation form with Ubuntu 24.04 x64 Gen2, Trusted launch and Standard_B1s selected before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        570,
+        1470,
+        1525
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "8a4d9cda93fdb23b513ca0ec9cbabcdc8d8a6d30ca5cccfd1e0ce93d7bc6a8a1"
+    },
+    "portal/03-ssh-and-ports.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "VM creation form with RSA key generation and public inbound ports None before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        560,
+        1500,
+        1530
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "4b819dfdb70b76e7c7f128cf15033852273b40df3b671e91054c8a9f6b47aa0e"
+    },
+    "portal/04-os-disk.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "VM creation form with Standard HDD selected before deployment; not a deployed disk",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 4"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        625,
+        1500,
+        1320
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "883f9db90ba591a28b17f9c7a887f5c0b4627f2a0b01a4ab3d2f566da78bd898"
+    },
+    "portal/05-private-network.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "VM creation form with public IP None, basic NIC NSG and public inbound ports None before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 4"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        900,
+        1500,
+        1610
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "9cc6f4806c3c905358c14da90815f114fe45c92619b4174107f32c56472eea2a"
+    },
+    "portal/06-boot-diagnostics.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "VM creation form with managed boot diagnostics selected and no added alert or guest diagnostics before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 5"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        755,
+        1500,
+        1455
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "9a722b90f6714687bf2dad805d40742abb643399d23184e999fe29acec656117"
+    }
+  }
+}

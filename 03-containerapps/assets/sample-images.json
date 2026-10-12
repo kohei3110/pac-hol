@@ -1,0 +1,29 @@
+{
+  "verified": "2026-10-12",
+  "source": "https://learn.microsoft.com/en-us/azure/container-apps/blue-green-deployment",
+  "registry": "https://mcr.microsoft.com",
+  "images": [
+    {
+      "role": "old",
+      "image": "mcr.microsoft.com/k8se/samples/test-app:fb699ef",
+      "tag": "fb699ef",
+      "digest": "sha256:d5eb42ced9fe4c735368da51238348c352852887d8e5fffae8b072d7927f1d73",
+      "os": "linux",
+      "architecture": "amd64",
+      "targetPort": 80,
+      "environment": {"REVISION_COMMIT_ID": "fb699ef"}
+    },
+    {
+      "role": "new",
+      "image": "mcr.microsoft.com/k8se/samples/test-app:c6f1515",
+      "tag": "c6f1515",
+      "digest": "sha256:d76376049baca9ccdf831f78f93c9640079f3201cc2dcde76a1347f0b8e9155f",
+      "os": "linux",
+      "architecture": "amd64",
+      "targetPort": 80,
+      "environment": {"REVISION_COMMIT_ID": "c6f1515"}
+    }
+  ],
+  "purpose": "Short-lived fictional training sample, not a production application",
+  "warning": "The sample exposes environment variables. Never add secrets, credentials, managed identities or business data."
+}

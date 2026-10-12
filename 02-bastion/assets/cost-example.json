@@ -1,0 +1,16 @@
+{
+  "retrieved": "2026-10-12",
+  "source": "https://prices.azure.com/api/retail/prices",
+  "region": "japaneast",
+  "currency": "USD",
+  "priceType": "Consumption",
+  "rates": [
+    {"resource": "Azure Bastion Basic", "meter": "Basic Gateway", "unit": "1 Hour", "price": 0.19},
+    {"resource": "Standard_B1s Linux", "meter": "B1s", "unit": "1 Hour", "price": 0.0136},
+    {"resource": "Standard IPv4 Static Public IP", "meter": "Standard IPv4 Static Public IP", "unit": "1 Hour", "price": 0.005}
+  ],
+  "exampleHours": 2,
+  "exampleSubtotal": 0.4172,
+  "excluded": ["OS disk", "data transfer", "additional services", "taxes", "currency conversion"],
+  "notACapOrInvoice": true
+}

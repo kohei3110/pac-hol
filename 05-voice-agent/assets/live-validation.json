@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-12T14:16:05.934253+00:00",
+  "method": "Actual control-plane verification of the new owned Foundry resources",
+  "checks": {
+    "ownedAccountAndProject": true,
+    "projectReady": true,
+    "entraOnly": true,
+    "restrictedNetwork": true,
+    "foundryUserProjectOnly": true,
+    "noModelDeployment": true
+  },
+  "prerequisitesPassed": true,
+  "voiceWorkflowPassed": true,
+  "cleanupVerified": true,
+  "portalRunThrough": "not-executed",
+  "microphoneHumanTest": "not-executed",
+  "firstTimeLearnerTest": "not-executed",
+  "voiceChecks": 19,
+  "fullHandsOnPassed": false,
+  "cleanupConfirmedAt": "2026-10-12T14:41:59.622811+00:00",
+  "softDeletedOwnedAccountPurged": true,
+  "purgeConfirmedAt": "2026-10-12T14:45:45.160341+00:00"
+}

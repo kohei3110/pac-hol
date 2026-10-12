@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-11T14:49:40.400109+00:00",
+  "method": "Azure CLI against real Azure resources; not a Portal UI run-through",
+  "resourceGroup": "rg-hol01-20261011-run01",
+  "vmName": "vm-hol01-run01",
+  "location": "japaneast",
+  "image": "Canonical:ubuntu-24_04-lts:server:24.04.202609040",
+  "size": "Standard_B1s",
+  "checks": {
+    "provisioningSucceeded": true,
+    "running": true,
+    "oneVm": true,
+    "linux": true,
+    "exactSize": true,
+    "trustedLaunch": true,
+    "secureBootAndVtpm": true,
+    "noPublicIpResources": true,
+    "noNicPublicIp": true,
+    "noCustomInboundAllowRules": true,
+    "standardHdd": true,
+    "smallOsDisk": true,
+    "noDataDisks": true,
+    "privateSubnet": true,
+    "managedBootDiagnostics": true,
+    "deallocated": true,
+    "diskRemainsAfterDeallocation": true
+  },
+  "cleanupVerified": true,
+  "diskSizeField": "diskSizeGB",
+  "resourceTypes": [
+    "Microsoft.Compute/disks",
+    "Microsoft.Compute/virtualMachines",
+    "Microsoft.Network/networkInterfaces",
+    "Microsoft.Network/networkSecurityGroups",
+    "Microsoft.Network/virtualNetworks"
+  ],
+  "durationSeconds": 380,
+  "completedChecks": 17,
+  "requiredChecks": 17,
+  "passed": true,
+  "newNetworkWatcherCount": 0
+}

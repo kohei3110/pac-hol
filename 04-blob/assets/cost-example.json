@@ -1,0 +1,20 @@
+{
+  "retrieved": "2026-10-12",
+  "source": "https://prices.azure.com/api/retail/prices",
+  "currency": "USD",
+  "rates": [
+    {"resource": "ACR Basic", "region": "japaneast", "unit": "1/Day", "price": 0.1666},
+    {"resource": "Standard Private Endpoint", "region": "Global", "unit": "1 Hour", "price": 0.01},
+    {"resource": "Hot LRS Blob, first tier", "region": "japaneast", "unit": "1 GB/Month", "price": 0.02}
+  ],
+  "additionalCosts": [
+    "Container Apps compute and requests",
+    "Storage transactions and transfer",
+    "ACR build duration and stored image size",
+    "Private DNS",
+    "VNet-integrated environment managed load balancer and public IPs",
+    "Inherited protection or retention services",
+    "Taxes and currency conversion"
+  ],
+  "notACapOrInvoice": true
+}

@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-12",
+  "icons": {
+    "portal": {
+      "label": "Management portal",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10820-icon-service-Management-Portal.svg",
+      "svg": "svg/portal.svg",
+      "png": "png/portal.png",
+      "svgSha256": "da4f4acfaab5e6dc330bd1ef74a78895b80f4d54da9263cad0cc0eef981791e5",
+      "pngSha256": "9d3c90a6c1b4a9098f7c26c9f06479371b7e7588f2b0c47380e3c0987eb86625",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "resource-group": {
+      "label": "Azure Resource Groups",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "svg": "svg/resource-group.svg",
+      "png": "png/resource-group.png",
+      "svgSha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977",
+      "pngSha256": "8d25d44e466022356fc3b2c843be4187b7d3bc68c8639f0d6da156d133dc6075",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "virtual-network": {
+      "label": "Azure Virtual Networks",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "svg": "svg/virtual-network.svg",
+      "png": "png/virtual-network.png",
+      "svgSha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d",
+      "pngSha256": "93c7edb3e0fa962591edb98e32a6d60f08c8d6e585a71c686f647e205228ff10",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "bastion": {
+      "label": "Azure Bastion",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/networking/02422-icon-service-Bastions.svg",
+      "svg": "svg/bastion.svg",
+      "png": "png/bastion.png",
+      "svgSha256": "7d3c33e355b9e180bb96491492ff856e379c27b3e7920526e2552c9b1593d3cb",
+      "pngSha256": "5705650863554e4c6cd96eddc83dd29fc940b4371f2bcf7314e68ec758aec627",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "virtual-machine": {
+      "label": "Azure Virtual Machine",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/compute/10021-icon-service-Virtual-Machine.svg",
+      "svg": "svg/virtual-machine.svg",
+      "png": "png/virtual-machine.png",
+      "svgSha256": "092d18ffadec9ec0e5af129186dc7bc2a80544011e55f965604ed4b13873e0fc",
+      "pngSha256": "d0ddfe62c5539f60b7361c74004796d9e1280d80e53d557231b1a246ede35c10",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    }
+  },
+  "images": {
+    "bastion-path.png": {
+      "kind": "educational-diagram-not-portal",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "sha256": "06b01558adc03697d493342df08922990e2b799f2f068e81875f016cb0c48785",
+      "editableSource": "bastion-path.excalidraw"
+    },
+    "portal/02-bastion-create.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Basic selected in genuine creation form before deployment; not a successful SSH session",
+      "cropSourcePixels": [
+        0,
+        255,
+        1530,
+        1725
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            555,
+            795,
+            1510,
+            855
+          ],
+          "reason": "default VNet field includes an existing resource-group name"
+        },
+        {
+          "rectangle": [
+            555,
+            935,
+            1510,
+            1000
+          ],
+          "reason": "uncommitted default subnet addresses differ from lab settings"
+        },
+        {
+          "rectangle": [
+            555,
+            1230,
+            1510,
+            1295
+          ],
+          "reason": "uncommitted default public-IP resource name"
+        }
+      ],
+      "annotations": [],
+      "sha256": "11087f2314f5b639a8bb3100479edf533ca5a4b433f3d4af1e2f957725e5e681"
+    },
+    "portal/01a-vm-subnet.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "unsubmitted new VNet form editing snet-vm at 10.42.0.0/24; not an existing subnet or deployed network",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 2"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        590,
+        260,
+        2190,
+        1250
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "fd588356ced2f04d51fe78e0906c7abdf93a14b5ac77c13d0f9ae684db277c7a"
+    },
+    "portal/01b-bastion-subnet.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "unsubmitted new VNet form adding AzureBastionSubnet at 10.42.1.0/26 with purpose Azure Bastion",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 2"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        590,
+        260,
+        2190,
+        1250
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "d97b15ace2abeee8597087d8ddd76874c91b70c75af8198e4970a8d17920bdff"
+    },
+    "portal/01-vnet-subnets.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "unsubmitted new VNet form listing both draft subnets; not evidence of a deployed VNet",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "Task 2"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        550,
+        1460,
+        1185
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "87aa5bbac394bdb6a66413ffd05772eb399b4f6e04a5b2b0caab30d8a548e98a"
+    }
+  },
+  "pendingScreenshots": [
+    "03-vm-rsa",
+    "04-vm-network",
+    "05-vm-nsg",
+    "06-bastion-review",
+    "07-local-key-connection",
+    "08-guest-commands",
+    "09-resource-list",
+    "10-delete-confirmation",
+    "11-deletion-complete"
+  ]
+}

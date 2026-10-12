@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第4回 CSVをBlobに保存して、表とグラフで見る</title>
+  <script nonce="{{ nonce }}">
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+    (() => {
+      const explicit = new URLSearchParams(window.location.search).get("scoutTheme");
+      const normalized = ["light", "dark"].includes(explicit)
+        ? explicit : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", normalized);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text);
+      font: 16px/1.7 "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; }
+    main { max-width: 1200px; margin: auto; padding: 32px; }
+    h1 { font-size: 30px; margin: 8px 0 12px; line-height: 1.4; }
+    h2 { font-size: 21px; margin: 0 0 16px; }
+    p { margin: 12px 0; }
+    .badge { display: inline-block; color: var(--cp-accent); background: var(--cp-accent-soft);
+      border-radius: 0.625rem; padding: 4px 12px; font-weight: 600; }
+    .hint { font-size: 14px; color: var(--cp-text-soft); }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+    .card { background: var(--cp-surface); border: 1px solid var(--cp-border);
+      padding: 24px; border-radius: 16px; min-width: 0; }
+    .wide { margin-top: 24px; }
+    .notice { border-left: 4px solid var(--cp-warning); padding: 12px 20px;
+      border-radius: 0.625rem; background: var(--cp-surface); }
+    label { display: block; font-weight: 600; margin-bottom: 8px; }
+    input, select { width: 100%; background: var(--cp-surface); color: var(--cp-text);
+      border: 1px solid var(--cp-border-strong); padding: 12px; border-radius: 0.625rem;
+      font: inherit; }
+    button { background: var(--cp-accent); color: var(--cp-accent-fg); border: none;
+      padding: 12px 20px; margin-top: 16px; border-radius: 0.625rem; cursor: pointer;
+      font: inherit; font-weight: 600; }
+    button:hover { background: var(--cp-accent-hover); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .secondary { background: var(--cp-surface); color: var(--cp-text);
+      border: 1px solid var(--cp-border-strong); }
+    .secondary:hover { background: var(--cp-surface-soft); }
+    a { color: var(--cp-link); text-underline-offset: 3px; }
+    code { font: 0.95em Consolas, "Courier New", Courier, monospace;
+      background: var(--cp-surface-soft); padding: 2px 6px; overflow-wrap: anywhere; }
+    .feedback { padding: 16px 20px; border-radius: 0.625rem; background: var(--cp-surface);
+      border-left: 4px solid var(--cp-accent); margin-top: 24px; white-space: pre-wrap; }
+    .feedback.error { border-left-color: var(--cp-danger); }
+    .summary { display: flex; flex-wrap: wrap; gap: 32px; margin: 20px 0; }
+    .summary strong { display: block; font-size: 32px; color: var(--cp-text); }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th, td { border-bottom: 1px solid var(--cp-border); text-align: left; padding: 10px; }
+    th { background: var(--cp-surface-soft); }
+    td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+    .chart-scroll { overflow-x: auto; }
+    svg { width: 100%; min-width: 600px; height: auto; display: block; }
+    svg text { fill: var(--cp-text); font-family: "Segoe UI", Aptos, Calibri, sans-serif; }
+    svg rect { fill: var(--cp-accent); }
+    .meta { overflow-wrap: anywhere; }
+    [hidden] { display: none !important; }
+    @media (max-width: 800px) {
+      main { padding: 16px; } .cards { grid-template-columns: 1fr; gap: 16px; }
+      h1 { font-size: 25px; } .card { padding: 20px; } .summary { gap: 24px; }
+    }
+  </style>
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body data-source="{{ source }}">
+<main>
+  <span class="badge">第4回・CSVの保存と読み込み</span>
+  <h1>CSVをBlobに保存し、表とグラフで確かめる</h1>
+  <p>CSVを選ぶと、アプリが非公開のBlobに保存します。表とグラフには、保存先から読み直したデータを使います。</p>
+  {% if source != "azure-blob" %}
+  <p class="notice" id="test-notice"><strong>ローカルテスト用・Azureには保存しません。</strong> データはテスト用の保存先に入ります。Azureに接続した画面ではありません。</p>
+  {% endif %}
+  <p class="notice">配布した架空CSVだけを使ってください。64 KiB・24行以内で、10件まで保存できます。このアプリはネットワーク制限付きの学習用です。本番では利用者のログインも別に用意します。</p>
+  <div class="cards">
+    <section class="card">
+      <h2>1. CSVを選んで保存</h2>
+      <p class="hint">先頭行は <code>month,value</code> にします。文字コードはUTF-8、値は0〜1000000の整数です。</p>
+      <p><a href="/samples/monthly-sales.csv">基本CSV（合計1020）</a> ／ <a href="/samples/monthly-sales-updated.csv">比較CSV（合計1080）</a></p>
+      <form id="upload-form">
+        <label for="file">今回アップロードするCSV</label>
+        <input id="file" name="file" type="file" accept=".csv,text/csv" required>
+        <button id="upload-button" type="submit" disabled>Blobへアップロード</button>
+      </form>
+      <p class="hint">同じ名前でも上書きしません。別の空きIDに保存するので、あとで元のファイルと比較できます。</p>
+    </section>
+    <section class="card">
+      <h2>2. 保存済みBlobから読み込む</h2>
+      <label for="saved-files">表示するファイル</label>
+      <select id="saved-files" disabled><option value="">読み込み中</option></select>
+      <button id="reload-button" class="secondary" type="button" disabled>Blobから再読み込み</button>
+      <p id="file-count" class="hint">一覧を取得しています。</p>
+      <p class="hint">ページを開き直しても、保存したファイルはBlobに残っています。同じIDを選んで読み直してみましょう。</p>
+    </section>
+  </div>
+  <div id="feedback" class="feedback" role="status" aria-live="polite">保存済みファイルの一覧を読み込んでいます。</div>
+  <section id="visualization" class="card wide" hidden aria-label="保存済みデータの可視化">
+    <h2>3. 保存したCSVを表とグラフで見る</h2>
+    <p id="selected-name"></p>
+    <div class="summary">
+      <span>データ行数<strong id="row-count">—</strong></span>
+      <span>値の合計<strong id="total">—</strong></span>
+      <span>最大値<strong id="maximum">—</strong></span>
+    </div>
+    <div class="chart-scroll" tabindex="0" role="region" aria-label="棒グラフ。小画面では横にスクロールできます。">
+      <svg id="chart" role="img" aria-label="月別の値を表す棒グラフ"></svg>
+    </div>
+    <table id="data-table">
+      <thead><tr><th scope="col">月</th><th scope="col">値</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="meta hint">保存先Blob: <code id="blob-name"></code><br>SHA-256: <code id="sha256"></code></p>
+    <p class="hint" id="read-source"></p>
+    <p><a id="download-link" href="#">保存されたCSVをダウンロード</a></p>
+    <button id="delete-button" class="secondary" type="button">このファイルをBlobから削除</button>
+    <p class="hint">ファイルを消しても、アプリや環境、Storageは残ります。最後のAzureリソースの削除は、主催者の案内に従ってください。</p>
+  </section>
+</main>
+</body>
+</html>

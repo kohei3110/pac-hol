@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-12",
+  "icons": {
+    "virtual-network": {
+      "label": "Azure Virtual Networks",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "svg": "svg/virtual-network.svg",
+      "png": "png/virtual-network.png",
+      "svgSha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d",
+      "pngSha256": "93c7edb3e0fa962591edb98e32a6d60f08c8d6e585a71c686f647e205228ff10",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "container-apps": {
+      "label": "Azure Container Apps",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/other/02884-icon-service-Worker-Container-App.svg",
+      "svg": "svg/container-apps.svg",
+      "png": "png/container-apps.png",
+      "svgSha256": "b53c7e6b7af75b25c04231a7dff85074f0c32cc1c306376350c0c8df0cb64417",
+      "pngSha256": "f3e54599c2c5ce9f73ced34fa80de2a2ff941643413fdfac515c83ba76ac9fb9",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "storage": {
+      "label": "Azure Storage accounts",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/storage/10086-icon-service-Storage-Accounts.svg",
+      "svg": "svg/storage.svg",
+      "png": "png/storage.png",
+      "svgSha256": "7190d3bb14ce30ce74bd0af873915830fe821e8c5f6ef6f3149e6f7cfb2aa4f7",
+      "pngSha256": "3c4e5dae035bcb4da3942a377064bda1c32af59044ab0851a9e13b737b9ef6c4",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "blob-container": {
+      "label": "Storage container",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10839-icon-service-Storage-Container.svg",
+      "svg": "svg/blob-container.svg",
+      "png": "png/blob-container.png",
+      "svgSha256": "cc50afdf3d9386f6872d314fd4f570645a594680c727bc709dfe8c4d6e5a6b2a",
+      "pngSha256": "2b17830aae615ac84afb46542de1c556123b42f76d4940cc1d4bbed40027416e",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "blob": {
+      "label": "Block blob",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10780-icon-service-Blob-Block.svg",
+      "svg": "svg/blob.svg",
+      "png": "png/blob.png",
+      "svgSha256": "649cdb593d0c7f56a227e4c28df40a3e5c489e303867d32502af2ee4b4865ea3",
+      "pngSha256": "022b7187c718ab3f633d2eb7ad9eab92f50d96270aeffb3a21f69e0e8417d072",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "managed-identity": {
+      "label": "Managed identities",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/identity/10227-icon-service-Managed-Identities.svg",
+      "svg": "svg/managed-identity.svg",
+      "png": "png/managed-identity.png",
+      "svgSha256": "fa2e0fb863e81d7923b5708bed196e19310867a194d23bea96dddc42e302693c",
+      "pngSha256": "46231320050d5ce044a0a22f55f109084eaa9b60d0ddad81f8a7eb43d53d58ab",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    }
+  },
+  "images": {
+    "upload-flow.png": {
+      "kind": "educational-diagram-not-portal",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "sha256": "56fdcd8a8dc0ef7abca826c9efadaa76caefcb102e7938547e7694f8f41b1a28",
+      "editableSource": "upload-flow.excalidraw"
+    },
+    "app/01-start.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "deployed Azure app before uploads; zero saved files",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": ".cards",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "becf814aedf35c1f22f687aeeb2ac7135c59a672841e7236200b07b2d23ec385"
+    },
+    "app/02-basic.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "actual saved Blob read: six rows, total 1020, maximum 240, six SVG bars",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": "#visualization",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "2e665c66b86823b8abfe639b5e6509eb48d40a050a510d0cb321690eaad85231"
+    },
+    "app/03-reopened.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "a fresh cookie context reads the same saved Blob; not browser-local storage",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": "#visualization",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "2e665c66b86823b8abfe639b5e6509eb48d40a050a510d0cb321690eaad85231"
+    },
+    "app/04-updated.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "a separate saved CSV: six rows, total 1080, maximum 300",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": "#visualization",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "eb66d06498fd0621fa39b7e73ad2a17e81e1dda7d36468152d8f75f0214caa47"
+    },
+    "app/05-invalid.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "actual HTTP 400 for invalid CSV column names; no file created",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": "#feedback",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            20,
+            45,
+            1116,
+            79
+          ],
+          "reason": "opaque mask over the request ID; retain the actual input error"
+        }
+      ],
+      "annotations": [],
+      "sha256": "9ca83bd7bb6acfe6a4555d4e524408e06fdc0c1bcc61f5a1d7a82517d947db54"
+    },
+    "app/06-deleted.png": {
+      "kind": "deployed-app-browser-screenshot",
+      "captured": "2026-10-12T07:22:07.914493+00:00",
+      "state": "owned test files deleted via UI; zero saved files after page reload",
+      "sourceProof": "browser-validation.json",
+      "sourceMethod": "Fresh Playwright Chrome contexts against the actual HTTPS Container App; native file inputs set to bundled fictional CSVs, not manual OS dialogs",
+      "region": ".cards",
+      "removed": [
+        "browser chrome and real app URL were outside the captured page region"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "becf814aedf35c1f22f687aeeb2ac7135c59a672841e7236200b07b2d23ec385"
+    },
+    "portal/01-storage-create.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "genuine Storage creation form before deployment; reference only, not the private test deployment",
+      "cropSourcePixels": [
+        0,
+        255,
+        2840,
+        1746
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            310,
+            389,
+            854,
+            423
+          ],
+          "reason": "subscription display name"
+        },
+        {
+          "rectangle": [
+            310,
+            439,
+            854,
+            473
+          ],
+          "reason": "an existing default resource-group name"
+        }
+      ],
+      "annotations": [],
+      "sha256": "34f12efe3520e2ec959196d48afebaa8ab44f5aba529fa878d46e1142acceee0"
+    },
+    "portal/02-storage-security.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Storage account creation form with anonymous access and Shared Key disabled, secure transfer required and TLS 1.2 before deployment",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "participant reference",
+        "instructor preparation"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        570,
+        1530,
+        1230
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "85868080743a90383c9623dfcb66fa370a637985f20fe3e22f7af9b5e83a92a9"
+    },
+    "portal/03-storage-network.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Storage account creation form with public network access disabled before deployment; no private endpoint configured",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "participant reference",
+        "instructor preparation"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        570,
+        1530,
+        1445
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "f0898ff9950ae6ea978e0628d37614ceb5fa8f7630cac4e5cec29d3d37c03eea"
+    },
+    "portal/05-private-endpoint-entry.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Storage account creation form showing the Add private endpoint entry and an empty list before deployment; no DNS or endpoint validation",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form-only",
+      "submitted": false,
+      "reviewed": true,
+      "illustrates": [
+        "instructor preparation"
+      ],
+      "sourcePixels": [
+        2840,
+        1730
+      ],
+      "cropSourcePixels": [
+        30,
+        895,
+        1530,
+        1390
+      ],
+      "removed": [
+        "browser tabs and profile",
+        "Azure account and directory header",
+        "project and subscription fields outside the crop"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "6ab2a5617cdde10fabffd6f50e393c02c0af8ede15bc0c888b90f01fa5a00a61"
+    }
+  },
+  "pendingScreenshots": [
+    "portal/03-container-private.png",
+    "portal/04-identity-rbac.png",
+    "portal/05-private-endpoint-dns.png",
+    "portal/06-app-ingress.png",
+    "portal/07-delete-confirmation.png",
+    "portal/08-deletion-complete.png"
+  ]
+}

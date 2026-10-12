@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-12T02:18:02.104480+00:00",
+  "method": "Supplementary local Docker checks performed after the Azure lifecycle, not a Portal run-through",
+  "passed": false,
+  "dockerClientPresent": true,
+  "localDaemonReachable": true,
+  "failure": {
+    "stage": "docker-run",
+    "type": "TimeoutExpired",
+    "timeoutSeconds": 300,
+    "containerIdReturned": false
+  },
+  "containersRemoved": true,
+  "ownedContainerNamesVerifiedAbsent": true,
+  "checks": []
+}

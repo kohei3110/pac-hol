@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-12T01:38:12.726977+00:00",
+  "method": "ARM deployment plus Azure CLI and actual HTTPS responses; not Portal UI operations",
+  "resourceGroup": "rg-hol03-20261012-check02",
+  "location": "japaneast",
+  "checks": {
+    "environmentSucceeded": true,
+    "consumptionOnly": true,
+    "noSavedLogs": true,
+    "appSucceeded": true,
+    "httpsOnly": true,
+    "targetPort80": true,
+    "multipleMode": true,
+    "smallResources": true,
+    "minZeroMaxOne": true,
+    "v1PinnedNotLatest": true,
+    "initialMainOld": true,
+    "newRevisionCreated": true,
+    "oldRevisionImmutable": true,
+    "mainStillOldBeforeSwitch": true,
+    "previewNewBeforeSwitch": true,
+    "explicitNew100": true,
+    "mainNewAfterSwitch": true,
+    "explicitOld100": true,
+    "mainOldAfterRollback": true,
+    "twoRevisionsOnly": true,
+    "noSecretEnv": true,
+    "expectedResourceTypes": true
+  },
+  "httpStages": [
+    {
+      "stage": "initial-old",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "ca-hol03-check02--v1",
+      "consecutiveMatchingResponses": 3,
+      "observations": [
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        }
+      ]
+    },
+    {
+      "stage": "old-during-preview",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "ca-hol03-check02--v1",
+      "consecutiveMatchingResponses": 3,
+      "observations": [
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        }
+      ]
+    },
+    {
+      "stage": "new-preview",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "ca-hol03-check02--v2",
+      "consecutiveMatchingResponses": 3,
+      "observations": [
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        },
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        },
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        }
+      ]
+    },
+    {
+      "stage": "main-new",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "ca-hol03-check02--v2",
+      "consecutiveMatchingResponses": 3,
+      "observations": [
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        },
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        },
+        {
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "ca-hol03-check02--v2"
+        }
+      ]
+    },
+    {
+      "stage": "main-rollback",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "ca-hol03-check02--v1",
+      "consecutiveMatchingResponses": 3,
+      "observations": [
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        },
+        {
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "ca-hol03-check02--v1"
+        }
+      ]
+    }
+  ],
+  "requiredChecks": 22,
+  "behaviorPassed": true,
+  "cleanupVerified": true,
+  "portalRunThrough": "not-executed",
+  "firstTimeLearnerTest": "not-executed",
+  "resourceTypes": [
+    "Microsoft.App/containerApps",
+    "Microsoft.App/managedEnvironments"
+  ],
+  "durationSeconds": 2004,
+  "completedChecks": 22
+}

@@ -1,0 +1,11 @@
+{
+  "method": "Live control-plane role and owned deployment verification; no role changes",
+  "checks": {
+    "containerScopedRole": true,
+    "registryScopedRole": true,
+    "assignedIdentityInApp": true,
+    "remediatedImageDeployed": true,
+    "appReady": true
+  },
+  "passed": true
+}

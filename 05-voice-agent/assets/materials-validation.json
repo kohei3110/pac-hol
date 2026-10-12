@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-12T15:31:05.728080+00:00",
+  "method": "Fresh Chrome renders the local offline guide; real instruction downloads and participant-only A4 print",
+  "checks": {
+    "lightNoPageOverflow": true,
+    "lightAllImagesLoaded": true,
+    "lightHintContrastAtLeast4.5": true,
+    "lightExplicitTheme": true,
+    "lightAllTwelveTasks": true,
+    "lightInstructionsWrapWithinPage": true,
+    "darkNoPageOverflow": true,
+    "darkAllImagesLoaded": true,
+    "darkHintContrastAtLeast4.5": true,
+    "darkExplicitTheme": true,
+    "darkAllTwelveTasks": true,
+    "darkInstructionsWrapWithinPage": true,
+    "checklistAndResetWork": true,
+    "instructions-v1.txtDownloadExact": true,
+    "instructions-v2.txtDownloadExact": true,
+    "desktopNoPageOverflow": true,
+    "supplementsExcludedFromPrint": true,
+    "participantHonestAboutIncompleteUi": true,
+    "noJavaScriptErrors": true
+  },
+  "observations": {
+    "light": {
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "foreground": "rgb(111, 111, 111)",
+      "background": "rgb(247, 244, 239)",
+      "allImagesLoaded": true,
+      "instructionsFit": true,
+      "taskCount": 12,
+      "hintContrast": 4.58
+    },
+    "dark": {
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "foreground": "rgb(176, 176, 176)",
+      "background": "rgb(61, 59, 58)",
+      "allImagesLoaded": true,
+      "instructionsFit": true,
+      "taskCount": 12,
+      "hintContrast": 5.137
+    }
+  },
+  "passed": true
+}

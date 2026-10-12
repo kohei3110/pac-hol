@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-13",
+  "icons": {
+    "foundry": {
+      "label": "Microsoft Foundry",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/ai + machine learning/035746832-icon-service-AI-Foundry.svg",
+      "svg": "svg/foundry.svg",
+      "png": "png/foundry.png",
+      "svgSha256": "fab039a771f72780ae34e59065d61c66a02d3c347d50923ef2956f34912ea02c",
+      "pngSha256": "6c5d5b5b8a0a5c1a8e5101538bc04815d006fe9bbf0f5c3b233af97d0921c212",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "speech": {
+      "label": "Speech service",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/ai + machine learning/00797-icon-service-Speech-Services.svg",
+      "svg": "svg/speech.svg",
+      "png": "png/speech.png",
+      "svgSha256": "3f758eccdf371534309a50e8688bd75e685246f80485a741588d13bef69a7eb3",
+      "pngSha256": "aeae535ae9dcabf746ca8df017c32aa2ff1b670847f7dc50043638d3f0849cc4",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    },
+    "resource-group": {
+      "label": "Azure Resource Groups",
+      "source": "azure-v24",
+      "archiveMember": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "svg": "svg/resource-group.svg",
+      "png": "png/resource-group.png",
+      "svgSha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977",
+      "pngSha256": "8d25d44e466022356fc3b2c843be4187b7d3bc68c8639f0d6da156d133dc6075",
+      "width": 512,
+      "height": 512,
+      "sourceManifest": "slides/assets/azure/manifest.json"
+    }
+  },
+  "images": {
+    "voice-flow.png": {
+      "kind": "educational-diagram-not-portal",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "sha256": "1f4c92faabe23893e492d31d6fba35ddcaf9bc254f859b2bcc3679fe97fd0f13",
+      "editableSource": "voice-flow.excalidraw"
+    },
+    "voice-results.png": {
+      "kind": "verified-audio-transcript-excerpt-not-screenshot",
+      "sourceProof": "voice-validation.json",
+      "sourceMethod": "Actual 24-kHz PCM16 Japanese synthetic speech streamed in real time over the SDK voice WebSocket; no microphone capture or typed-input substitution",
+      "sha256": "436f119b6bfab95fb30938fa16330b5129e5f2ee7499127ede3e2c9575713676",
+      "retained": [
+        "fictional transcripts",
+        "audio format/duration",
+        "response status",
+        "tested version"
+      ]
+    },
+    "portal/01-foundry-create.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-10-12",
+      "state": "Foundry resource creation form before deployment; reference only, not a voice-agent playground",
+      "cropSourcePixels": [
+        70,
+        306,
+        2905,
+        1784
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            299,
+            305,
+            858,
+            350
+          ],
+          "reason": "subscription display name"
+        }
+      ],
+      "annotations": [],
+      "removed": [
+        "browser chrome/profile",
+        "signed-in Azure account and directory header"
+      ],
+      "sha256": "45fe91226770eee1406949f95e0195ecb634747c63ad9b40f02e0899c7ba4ac7"
+    },
+    "portal/02-foundry-basics-detail.png": {
+      "kind": "genuine-azure-portal-screenshot-detail",
+      "captured": "2026-10-12",
+      "prepared": "2026-10-13",
+      "state": "Detail of the same uncommitted Portal form: resource group, resource name and region.",
+      "parentAsset": "portal/01-foundry-create.png",
+      "parentSha256": "45fe91226770eee1406949f95e0195ecb634747c63ad9b40f02e0899c7ba4ac7",
+      "cropParentPixels": [
+        10,
+        300,
+        900,
+        530
+      ],
+      "opaqueMasks": [
+        {
+          "rectangle": [
+            289,
+            5,
+            848,
+            50
+          ],
+          "reason": "subscription display name"
+        }
+      ],
+      "annotations": [
+        {
+          "kind": "numbered-outline",
+          "number": 1,
+          "rectangle": [
+            302,
+            66,
+            801,
+            94
+          ]
+        },
+        {
+          "kind": "numbered-outline",
+          "number": 2,
+          "rectangle": [
+            302,
+            132,
+            801,
+            160
+          ]
+        },
+        {
+          "kind": "numbered-outline",
+          "number": 3,
+          "rectangle": [
+            302,
+            177,
+            801,
+            204
+          ]
+        }
+      ],
+      "sha256": "0b06c4c59b7c3aa6a7c2b04e31e47c5b3acb7544171141302c0da2d1a7426111"
+    },
+    "portal/03-default-project-detail.png": {
+      "kind": "genuine-azure-portal-screenshot-detail",
+      "captured": "2026-10-12",
+      "prepared": "2026-10-13",
+      "state": "Detail of the same uncommitted Portal form: default project name; not a Voice agent setting.",
+      "parentAsset": "portal/01-foundry-create.png",
+      "parentSha256": "45fe91226770eee1406949f95e0195ecb634747c63ad9b40f02e0899c7ba4ac7",
+      "cropParentPixels": [
+        10,
+        590,
+        900,
+        750
+      ],
+      "opaqueMasks": [],
+      "annotations": [
+        {
+          "kind": "numbered-outline",
+          "number": 1,
+          "rectangle": [
+            302,
+            121,
+            801,
+            148
+          ]
+        }
+      ],
+      "sha256": "09b0cd41d801a19425bb7980f2a1a8818e179d1ccaea029574beb78791b02333"
+    }
+  },
+  "pendingScreenshots": [
+    "foundry/01-project-agents.png",
+    "foundry/02-create-voice.png",
+    "foundry/03-instructions-model-voice.png",
+    "foundry/04-advanced-settings.png",
+    "foundry/05-microphone-session.png",
+    "foundry/06-conversation.png",
+    "foundry/07-saved-new-version.png",
+    "foundry/08-updated-conversation.png",
+    "foundry/09-end-delete.png",
+    "portal/10-deletion-complete.png"
+  ]
+}
