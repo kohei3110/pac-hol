@@ -10,7 +10,7 @@ VMには公開IPを付けず、Bastion経由で接続します。接続後はコ
 対象: Azureを初めて操作する人。第1回を実施していなくても、この手順から始められます  
 目安: **75〜90分＋予備15分**（VM・Bastionの作成、削除の待ち時間を含む）  
 操作: Azure Portalと、Bastionで接続したVMのLinux画面を使います。PCへのAzure CLI・SSHソフトのインストールは不要です  
-更新日: 2026-10-13 ／ [共通の始め方と名前](../self-study.md) ／ [実施記録](run-through.md)
+更新日: 2026-10-28 ／ [共通の始め方と名前](../self-study.md) ／ [実施記録](run-through.md)
 
 > **Bastion Basicは、接続していなくても料金がかかります。**
 > VMを停止したり、ブラウザーを閉じたりしても、Bastionの課金は止まりません。
