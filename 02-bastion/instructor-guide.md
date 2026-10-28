@@ -35,14 +35,14 @@ RG、VNet、VM、Bastion、公開IPは参加者が作成し、最後に自分の
 ## 開催前に用意しておくこと
 
 1. 使うサブスクリプション、誰が費用を負担するか、終了時刻、提出先、質問窓口を決めておきます。
-2. 参加者がRGを作れるか、指定のVMサイズを使えるか確認します。リージョン全体とBファミリーのvCPUクォータ、BastionとStandardの公開IPv4の利用制限も確認してください。
+2. 参加者がRGを作れるか、指定のVMサイズを使えるか確認します。リージョン全体とDaldsv6ファミリーのvCPUクォータに、VM1台あたり2 vCPU×同時参加人数分の余裕があるか確認します。サービスによってはファミリー名がDaldv6と表示されます。BastionとStandardの公開IPv4の利用制限も確認してください。
 3. Microsoft.Compute／Microsoft.Networkの登録と、組織のリージョン・SKU・タグ・ネットワークのポリシーを確認します。
 4. 参加者が専用RG内でVM・NSG規則・VNet・Bastion・公開IPを作成でき、**専用RGを削除できる**ことを確認します。
    この回は本人がRGも作るので、サブスクリプション側のRG作成権限が必要です。
 5. 接続には、VM・VMのNIC・Bastionに対するReader相当の閲覧権限と、VM内の認証が必要です。
    今回はSSH鍵でログインするため、Entra IDログイン用の拡張機能やVM Loginロールは追加しません。
 6. 参加者のPCでRSA鍵をダウンロードし、接続時にファイルを選択できるか確認します。PortalとBastionのHTTPS・WebSocket通信も確認してください。
-7. Ubuntu 24.04 x64 Gen2、B1s、Trusted launch、Standard HDD LRSを利用できるか確認します。
+7. Ubuntu 24.04 x64 Gen2、Standard_D2alds_v6（2 vCPU・4 GiB）、Trusted launch、Standard HDD LRS、高速ネットワーク有効を利用できるか確認します。
 8. 費用を見積もります。Basicの公開価格の例は$0.19/時ですが、契約・通貨・課金単位による違いと、ディスク・IP・転送・ポリシーで有効になる有料サービスの費用も確認してください。
    参加者数と、デプロイ・削除の待ち時間も含めて計算します。共有Bastionは使わず、本人が自分のものを片付ける構成にします。
 9. 開催用のPortalで、BasicとRSA鍵を使って、作成からログイン・コマンド実行・削除まで一度通して試します。

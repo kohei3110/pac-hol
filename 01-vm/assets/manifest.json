@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-28",
   "icons": {
     "resource-group": {
       "label": "Azure Resource Groups",
@@ -88,10 +88,10 @@
     },
     "portal/02-basics-os-size.png": {
       "kind": "genuine-azure-portal-screenshot",
-      "captured": "2026-10-12",
-      "state": "VM creation form with Ubuntu 24.04 x64 Gen2, Trusted launch and Standard_B1s selected before deployment",
+      "captured": "2026-10-28",
+      "state": "VM creation form with Japan East, Ubuntu 24.04 x64 Gen2, Trusted launch and Standard_D2alds_v6 (2 vCPU, 4 GiB) selected before deployment; not deployed",
       "sourceUrl": "https://portal.azure.com/",
-      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "sourceMethod": "authenticated browser canvas; browser UI tools and authorized macOS native UI events; window-only screenshot and crop; no browser security setting changes",
       "uiLanguage": "ja-JP",
       "captureScope": "creation-form-only",
       "submitted": false,
@@ -100,14 +100,14 @@
         "Task 3"
       ],
       "sourcePixels": [
-        2840,
-        1730
+        2560,
+        1720
       ],
       "cropSourcePixels": [
-        30,
-        570,
-        1470,
-        1525
+        590,
+        400,
+        1880,
+        1460
       ],
       "removed": [
         "browser tabs and profile",
@@ -116,7 +116,7 @@
       ],
       "opaqueMasks": [],
       "annotations": [],
-      "sha256": "8a4d9cda93fdb23b513ca0ec9cbabcdc8d8a6d30ca5cccfd1e0ce93d7bc6a8a1"
+      "sha256": "9f421957ea28aa1b827d6129421dc1943fe7b350ec4820f08a24bf200120be37"
     },
     "portal/03-ssh-and-ports.png": {
       "kind": "genuine-azure-portal-screenshot",
@@ -184,10 +184,10 @@
     },
     "portal/05-private-network.png": {
       "kind": "genuine-azure-portal-screenshot",
-      "captured": "2026-10-12",
-      "state": "VM creation form with public IP None, basic NIC NSG and public inbound ports None before deployment",
+      "captured": "2026-10-28",
+      "state": "Standard_D2alds_v6 VM creation form with public IP None, basic NIC NSG, public inbound ports None and accelerated networking enabled before deployment; not deployed",
       "sourceUrl": "https://portal.azure.com/",
-      "sourceMethod": "authenticated native Chrome window; authorized native UI events; no browser security setting changes",
+      "sourceMethod": "authenticated browser canvas; browser UI tools and authorized macOS native UI events; window-only screenshot and crop; no browser security setting changes",
       "uiLanguage": "ja-JP",
       "captureScope": "creation-form-only",
       "submitted": false,
@@ -196,14 +196,14 @@
         "Task 4"
       ],
       "sourcePixels": [
-        2840,
-        1730
+        2560,
+        1720
       ],
       "cropSourcePixels": [
-        30,
-        900,
-        1500,
-        1610
+        590,
+        420,
+        1880,
+        1280
       ],
       "removed": [
         "browser tabs and profile",
@@ -212,7 +212,7 @@
       ],
       "opaqueMasks": [],
       "annotations": [],
-      "sha256": "9cc6f4806c3c905358c14da90815f114fe45c92619b4174107f32c56472eea2a"
+      "sha256": "1ddf239448027377d392a08a618a5bea804913ed25cf9f9089ef7dc73e524c75"
     },
     "portal/06-boot-diagnostics.png": {
       "kind": "genuine-azure-portal-screenshot",

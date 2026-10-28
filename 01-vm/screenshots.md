@@ -9,10 +9,10 @@
 | ファイル | 画像の種類 | 手順で使う場所 |
 | --- | --- | --- |
 | `assets/portal/01-create-entry.png` | 実際のAzure Portalをブラウザーで撮影 | Task 2。作成画面と新Create-VMプレビューの案内 |
-| `assets/portal/02-basics-os-size.png` | 作成前の基本情報 | Task 3。Ubuntu・x64 Gen2・Trusted launch・B1s |
+| `assets/portal/02-basics-os-size.png` | 作成前の基本情報 | Task 3。Japan East・Ubuntu 24.04・x64 Gen2・Trusted launch・D2alds_v6（2 vCPU・4 GiB） |
 | `assets/portal/03-ssh-and-ports.png` | 作成前の認証と受信ポート | Task 3。RSAの新規キーと受信ポート「なし」 |
 | `assets/portal/04-os-disk.png` | 作成前のディスク設定 | Task 4。Standard HDDと追加設定 |
-| `assets/portal/05-private-network.png` | 作成前のネットワーク設定 | Task 4。公開IPと受信ポートの2つの「なし」 |
+| `assets/portal/05-private-network.png` | 作成前のネットワーク設定 | Task 4。公開IPと受信ポートの2つの「なし」、高速ネットワーク有効 |
 | `assets/portal/06-boot-diagnostics.png` | 作成前の監視設定 | Task 5。マネージドの起動診断、追加の監視なし |
 | `assets/vm-resources.png` | 教材独自の説明用図解。公式アイコンを使用 | VM・ディスク・NIC・NSG・VNet、RGの関係 |
 
@@ -23,6 +23,10 @@
 2026-10-12に、サインイン済みのPortalで5枚を追加撮影しました。作成フォームに実習用の値を入力し、見たい欄だけを切り出しています。
 「作成」は実行しておらず、VM・鍵・ディスクは新しく作っていません。画像は設定欄の参考で、作成や削除の完了を示すものではありません。
 ブラウザーやPortalの保護設定は変更せず、アカウント・契約の欄は画像から除いています。
+
+2026-10-28に、基本情報とネットワーク設定の2枚を撮り直しました。実際のPortalでJapan East、Ubuntu 24.04 x64 Gen2、Trusted launch、Standard_D2alds_v6（2 vCPU・4 GiB）を選択し、公開IPなし・公開受信ポートなし・高速ネットワーク有効を確認しています。
+サインイン済みブラウザーの従来の作成画面を、ブラウザー操作ツールとmacOSのネイティブUI操作で設定し、対象ウィンドウだけを撮影・切り出しました。ブラウザーやPortalの保護設定は変更していません。
+アカウント・契約名・サブスクリプションIDは切り出し範囲の外にあり、画像上の設定値は変更していません。「作成」は押しておらず、リソースの作成・デプロイ成功を示すものではありません。このサイズでのデプロイ・接続・停止・削除は未検証です。
 
 ## 配布前に撮っておく画面
 

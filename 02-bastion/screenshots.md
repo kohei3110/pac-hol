@@ -13,6 +13,8 @@ Portalを撮影した画面と、接続経路を描いた図を掲載してい�
 | `assets/portal/01a-vm-subnet.png` | 新しいVNet内のサブネット入力欄 | Task 2。VM用の名前と `/24` |
 | `assets/portal/01b-bastion-subnet.png` | 新しいVNet内のBastion専用サブネット入力欄 | Task 2。Azure Bastionの目的と `/26` |
 | `assets/portal/01-vnet-subnets.png` | 作成前のサブネット一覧 | Task 2。2つの区画と、重なっていない範囲 |
+| `../01-vm/assets/portal/02-basics-os-size.png` | 第1回と共通のVM作成前の基本情報 | Task 3。Ubuntu 24.04 x64 Gen2・Trusted launch・D2alds_v6（2 vCPU・4 GiB）。VM名は第2回用に読み替える |
+| `../01-vm/assets/portal/05-private-network.png` | 第1回と共通のVM作成前のネットワーク設定 | Task 4。公開IPなし・受信ポートなし・高速ネットワーク有効 |
 
 作成画面を撮ったPortalは、検証CLIとは別のアカウント・サブスクリプションです。
 Basicを選んだ、作成前の画面を撮影し、既存RG・契約名・アカウントなどを隠しています。設定値を学習用に描き替えてはいません。
@@ -22,6 +24,8 @@ Basicを選んだ、作成前の画面を撮影し、既存RG・契約名・ア�
 既存のネットワークは変更せず、設定値を画像の上で描き替えることもしていません。
 VMのRSAと公開IPの欄は、第1回の作成前の画像を共通の参考として載せています。キー名は第2回用に読み替える説明を添えており、Bastion接続後の画像としては使っていません。
 
+2026-10-28に第1回で撮り直した、D2alds_v6の基本情報と高速ネットワーク有効の画像も共通の参考として使用しています。出典・切り出し範囲・SHA-256は `../01-vm/assets/manifest.json` に記録しています。第2回でのデプロイやBastion接続を示す画像ではありません。
+
 ## 配布前に撮っておく画面
 
 現行版のTask 1で、本人がRGを作り、個人識別名とParticipantタグを付ける画面も追加します。
@@ -29,7 +33,7 @@ VMのRSAと公開IPの欄は、第1回の作成前の画像を共通の参考と
 
 | 番号 | 対象 | 必ず見せる項目 |
 | --- | --- | --- |
-| 03 | VM基本情報と認証 | Ubuntu x64 Gen2、B1s、RSA、パブリック受信なし |
+| 03 | 第2回専用のVM基本情報と認証 | Ubuntu x64 Gen2、D2alds_v6、RSA、パブリック受信なし |
 | 04 | VMネットワーク | VM区画、VMの公開IPなし |
 | 05 | VM側NSG | AllowSshFromBastion 300とDenyOtherSsh 310 |
 | 06 | Bastion作成の確認画面 | Basic、専用サブネット、Standard Static公開IP |
