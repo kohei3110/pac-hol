@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-11-02",
   "icons": {
     "portal": {
       "label": "Management portal",
@@ -180,6 +180,38 @@
       "annotations": [],
       "sha256": "d97b15ace2abeee8597087d8ddd76874c91b70c75af8198e4970a8d17920bdff"
     },
+    "portal/08-bastion-commands.png": {
+      "kind": "genuine-azure-bastion-browser-ssh-screenshot",
+      "captured": "2026-11-02",
+      "state": "successful Basic browser SSH with the Portal-generated RSA PEM; all three documented commands executed on the D2alds_v6 VM",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "visible authenticated Chrome; Playwright keyboard input to the Bastion terminal canvas; no native SSH or Run Command",
+      "captureScope": "guest-terminal-command-results-only",
+      "reviewed": true,
+      "illustrates": [
+        "Task 9"
+      ],
+      "sourcePixels": [
+        1800,
+        900
+      ],
+      "cropSourcePixels": [
+        0,
+        28,
+        1400,
+        300
+      ],
+      "width": 1400,
+      "height": 272,
+      "removed": [
+        "empty terminal area and controls outside the crop",
+        "initial login banner excluded before capture using terminal screen redraw",
+        "PNG metadata"
+      ],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "8b1b402071dc247dcaeee6281b13f93e805dec82674ed49744f0a20d5c2a612f"
+    },
     "portal/01-vnet-subnets.png": {
       "kind": "genuine-azure-portal-screenshot",
       "captured": "2026-10-12",
@@ -219,7 +251,6 @@
     "05-vm-nsg",
     "06-bastion-review",
     "07-local-key-connection",
-    "08-guest-commands",
     "09-resource-list",
     "10-delete-confirmation",
     "11-deletion-complete",

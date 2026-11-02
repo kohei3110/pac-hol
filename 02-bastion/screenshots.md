@@ -13,6 +13,7 @@ Portalを撮影した画面と、接続経路を描いた図を掲載してい�
 | `assets/portal/01a-vm-subnet.png` | 新しいVNet内のサブネット入力欄 | Task 2。VM用の名前と `/24` |
 | `assets/portal/01b-bastion-subnet.png` | 新しいVNet内のBastion専用サブネット入力欄 | Task 2。Azure Bastionの目的と `/26` |
 | `assets/portal/01-vnet-subnets.png` | 作成前のサブネット一覧 | Task 2。2つの区画と、重なっていない範囲 |
+| `assets/portal/08-bastion-commands.png` | 実際のBastion BasicのブラウザーSSH接続後 | Task 9。D2alds_v6のVM内で実行した3コマンドと結果。2026-11-02撮影 |
 | `../01-vm/assets/portal/02-basics-os-size.png` | 第1回と共通のVM作成前の基本情報 | Task 3。Ubuntu 24.04 x64 Gen2・Trusted launch・D2alds_v6（2 vCPU・4 GiB）。VM名は第2回用に読み替える |
 | `../01-vm/assets/portal/05-private-network.png` | 第1回と共通のVM作成前のネットワーク設定 | Task 4。公開IPなし・受信ポートなし・高速ネットワーク有効 |
 
@@ -26,7 +27,14 @@ VMのRSAと公開IPの欄は、第1回の作成前の画像を共通の参考と
 
 2026-10-28に第1回で撮り直した、D2alds_v6の基本情報と高速ネットワーク有効の画像も共通の参考として使用しています。出典・切り出し範囲・SHA-256は `../01-vm/assets/manifest.json` に記録しています。第2回でのデプロイやBastion接続を示す画像ではありません。
 
+2026-11-02のPortal実機検証で、VNetの「アドレス空間」、プライベートサブネットのチェック方向、NSGまでの経路、VM作成・秘密キー保存のボタン名を本文に反映しました。Bastion用公開IPはJapan Eastで「ゾーン冗長」を選びます。既存のBastion画像には公開IPの作成ペインが写っていないため、この設定は本文の表と操作説明で確認してください。古い画像を今回の成功画面とは扱いません。
+同日に、Portalで生成・保存したRSA PEMを選び、BasicのブラウザーSSHで実際にログインしました。接続後の3コマンドの画像だけを新しく収録しています。ログイン時のIPを含む案内は画面外にし、ブラウザーのタブ・認証URL・アカウント・鍵の内容は収録していません。`audit1102`は検証用の識別名です。結果の文字列は描き替えていません。
+
 ## 配布前に撮っておく画面
+
+2026-10-29に、本文へ認証欄の入力順、RSA SSH形式、検証失敗時の確認、秘密キーの保存先、NSGの2規則の追加手順、Basicのインスタンス数を補足しました。
+共通認証画像のキーペア名は`key-hol01-p01`です。本文では第2回のキー名を直前に示していますが、第2回専用画像への差し替えは未完了です。
+RSAのVM作成、秘密キーのダウンロード、Basicのローカルファイル認証は2026-11-02に同じ検証環境で一続きに確認しました。未収録の画面は引き続き以下に記録します。過去の接続成功記録を、現行サイズ・現行手順の成功と読み替えません。
 
 現行版のTask 1で、本人がRGを作り、個人識別名とParticipantタグを付ける画面も追加します。
 これはまだ撮影できていません。既存の写真の名前は撮影時の例なので、本文の自分の控えへ読み替えます。
@@ -38,7 +46,6 @@ VMのRSAと公開IPの欄は、第1回の作成前の画像を共通の参考と
 | 05 | VM側NSG | AllowSshFromBastion 300とDenyOtherSsh 310 |
 | 06 | Bastion作成の確認画面 | Basic、専用サブネット、Standard Static公開IP |
 | 07 | Bastion接続・認証選択 | ローカルファイルからの秘密キー、`azureuser`。鍵の中身は表示しない |
-| 08 | 接続後のLinux画面 | VM内でwhoami、hostname、OS確認。実IP・個人情報は除去 |
 | 09 | 今回のRGのリソース | VM・ディスク・NIC・VNet・NSG・SSHキー・Bastion・公開IP |
 | 10 | RG削除確認 | 自分のRG名、削除対象、確認欄 |
 | 11 | 削除完了 | 更新後のRG・VM・Bastion一覧で今回の名前がない |
@@ -58,8 +65,9 @@ Portalの画面が変わったら、撮り直し、手順を直して、もう�
 ## 再生成
 
 文章は `guide.md` と講師用Markdown、画像の出典は `assets/manifest.json` を編集します。
-ルートで `python3 tools/build_handson.py --lesson 02` を実行し、図と画像入りHTMLを作ります。
-PDFも、HTMLの「手順書を印刷・PDF保存」から作り直してください。第2回だけを更新する場合、第1回のファイルを作り直す必要はありません。
+ルートで`python3 tools/rebuild_guides.py --lesson 02 --pdf`を実行し、既存デザインのHTMLとPDFを更新します。PandocとChromeが必要です。画像・図・manifest・Azureの検証記録は変更しません。
+生成時に長い日本語の内部IDを短いASCIIのIDへ置き換え、PDFのリンク名の長さに関する警告を防ぎます。見出しの文言は変わりません。PDFにも全回共通の始め方と解答例を収録します。HTMLのチェックは再読み込みで消えるメモであり、Azureの操作記録ではありません。
+旧`tools/build_handson.py`はこのリポジトリには含まれていません。第2回だけを更新する場合、第1回のファイルを作り直す必要はありません。
 HTMLの画像はクリックまたはEnterで拡大できます。
 
 公式アイコンは[Microsoftの配布版V24](https://learn.microsoft.com/en-us/azure/architecture/icons/)を、形や色を変えず、縦横比を保って使っています。

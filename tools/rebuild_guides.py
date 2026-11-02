@@ -3,6 +3,7 @@
 
 import argparse
 import base64
+import hashlib
 import html
 import mimetypes
 import os
@@ -93,6 +94,25 @@ def render(source, section, sources):
     return re.sub(r'href="([^"]+)"', link, content)
 
 
+def shorten_fragment_ids(content):
+    # Chrome uses fragment IDs as PDF names, whose byte length is limited.
+    anchors = {
+        identifier: "anchor-" + hashlib.sha256(identifier.encode()).hexdigest()[:16]
+        for identifier in re.findall(r'\bid="([^"]+)"', content)
+        if not identifier.isascii() or len(identifier) > 100
+    }
+    content = re.sub(
+        r'\bid="([^"]+)"',
+        lambda m: f'id="{anchors.get(m[1], m[1])}"',
+        content,
+    )
+    return re.sub(
+        r'href="#([^"]+)"',
+        lambda m: f'href="#{anchors.get(m[1], m[1])}"',
+        content,
+    )
+
+
 def rebuild(folder, pdf, chrome):
     target = folder / "guide.html"
     content = target.read_text()
@@ -128,7 +148,7 @@ def rebuild(folder, pdf, chrome):
         lambda m: f'href="#{anchors.get(m[1], m[1])}"',
         content,
     )
-    target.write_text(content)
+    target.write_text(shorten_fragment_ids(content))
     if pdf:
         with tempfile.TemporaryDirectory(prefix="hol-guide-print-") as profile:
             subprocess.run(

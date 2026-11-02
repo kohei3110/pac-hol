@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-02",
+  "scope": "lesson02-materials-only-not-a-novice-observation-test",
+  "markdownHtmlMatch": true,
+  "tasks": 12,
+  "brokenLinks": [],
+  "brokenImages": 0,
+  "embeddedImages": 9,
+  "checkboxes": 20,
+  "unrenderedEmphasisMarkers": 0,
+  "checkboxAndReset": true,
+  "imageKeyboardZoom": true,
+  "printSelfStudyVisible": true,
+  "hiddenPrintTargets": [],
+  "printAnswersVisibleAndRestored": true,
+  "mobileLightDarkNoOverflow": true,
+  "pageErrors": [],
+  "pdfAll12Tasks": true,
+  "pdfPages": 27,
+  "pdfCommonPreparationAndAnswers": true,
+  "hashes": {
+    "guide.md": "c43636f730672be1accb6d0d6fb386dd2762cf4b66adb54287a120001d63b552",
+    "guide.html": "4508252262f4f286035061a476eaae4b8e6f1fd9f9c6e7934bbdf4f214241703",
+    "guide.pdf": "3d8c44a2e3b3c6f263e170782f6519e494b0b2e798bd8fbc5ff0820c85634a56"
+  }
+}

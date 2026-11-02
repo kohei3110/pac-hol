@@ -1,0 +1,178 @@
+{
+  "date": "2026-11-02",
+  "scope": "lesson02-portal-walkthrough-not-a-novice-observation-test",
+  "originalInstructionsPassed": false,
+  "correctedPathCompleted": true,
+  "region": "japaneast",
+  "resourceGroup": "rg-hol02-audit1102",
+  "execution": {
+    "provisioning": "Azure Portal in a visible authenticated browser",
+    "automation": "Playwright using ordinary visible Portal controls",
+    "cli": "Preflight validation and read-only corroboration, not provisioning",
+    "preflight": {
+      "bicepBuild": "passed",
+      "armSubscriptionValidation": "passed",
+      "whatIf": "eight creates in the new dedicated RG; no modifications or deletions",
+      "validationTemplateDeployed": false
+    }
+  },
+  "configuration": {
+    "tags": {
+      "Purpose": "AzureHandsOn",
+      "Session": "02",
+      "Participant": "audit1102"
+    },
+    "vnet": {
+      "addressSpace": "10.42.0.0/16",
+      "subnets": {
+        "snet-vm": "10.42.0.0/24",
+        "AzureBastionSubnet": "10.42.1.0/26"
+      },
+      "defaultOutboundAccessBothSubnets": false,
+      "subnetNsgRouteTableAndNat": "none"
+    },
+    "vm": {
+      "size": "Standard_D2alds_v6",
+      "image": "Ubuntu 24.04 LTS x64 Gen2",
+      "securityType": "TrustedLaunch",
+      "secureBoot": true,
+      "vTpm": true,
+      "osDisk": "Standard_LRS",
+      "acceleratedNetworking": true,
+      "publicIp": null,
+      "adminUsername": "azureuser",
+      "passwordAuthenticationDisabled": true,
+      "sshKey": "New Portal-generated RSA PEM"
+    },
+    "nicNsgInboundRules": [
+      {
+        "name": "AllowSshFromBastion",
+        "priority": 300,
+        "source": "10.42.1.0/26",
+        "protocol": "Tcp",
+        "destinationPort": "22",
+        "access": "Allow"
+      },
+      {
+        "name": "DenyOtherSsh",
+        "priority": 310,
+        "source": "*",
+        "protocol": "Tcp",
+        "destinationPort": "22",
+        "access": "Deny"
+      }
+    ],
+    "bastion": {
+      "sku": "Basic",
+      "scaleUnits": 2,
+      "hostZoneSelection": "None",
+      "provisioningState": "Succeeded",
+      "publicIp": {
+        "sku": "Standard",
+        "allocation": "Static",
+        "version": "IPv4",
+        "tier": "Regional",
+        "portalZoneSelection": "Zone-redundant",
+        "zones": ["1", "2", "3"]
+      }
+    }
+  },
+  "bastionAttempts": [
+    {
+      "attempt": 1,
+      "publicIpZoneSelection": "No zone",
+      "publicIpZonesSubmitted": ["None"],
+      "result": "failed",
+      "errorCode": "InvalidAvailabilityZone",
+      "reviewScreenHadPassed": true,
+      "publicIpAndBastionCreated": false
+    },
+    {
+      "attempt": 2,
+      "change": "Re-entered the same names in Portal and changed only the public IP zone selection to zone-redundant",
+      "bastionSkuChanged": false,
+      "bastionHostZoneSelectionChanged": false,
+      "result": "Succeeded"
+    }
+  ],
+  "browserSsh": {
+    "entry": "VM overview > Connect > Bastion connection",
+    "authentication": "Private Key from Local File",
+    "username": "azureuser",
+    "sshPassphrase": "left empty for this Portal-generated key",
+    "result": "connected",
+    "commandInput": "Keyboard input into the actual Bastion browser terminal",
+    "commands": [
+      {"command": "whoami", "output": "azureuser"},
+      {"command": "hostname", "output": "vm-hol02-audit1102"},
+      {"command": "grep '^PRETTY_NAME=' /etc/os-release", "output": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\""}
+    ],
+    "cloudShellUsed": false,
+    "runCommandUsed": false,
+    "nativeSshUsed": false,
+    "packagesInstalled": false,
+    "screenshot": "portal/08-bastion-commands.png",
+    "screenshotSha256": "8b1b402071dc247dcaeee6281b13f93e805dec82674ed49744f0a20d5c2a612f",
+    "screenshotIsUnalteredResultTextCrop": true
+  },
+  "cleanup": {
+    "terminalExit": true,
+    "portalStop": true,
+    "powerStateVerified": "PowerState/deallocated",
+    "deletionSeparatelyApproved": true,
+    "approvedScope": "Only this dedicated RG and its eight resources",
+    "portalRgNameAndBothDeletionConfirmations": true,
+    "portalNotification": "リソース グループ rg-hol02-audit1102 を削除しました",
+    "portalDeletionFailureNotification": false,
+    "portalAbsenceChecks": {
+      "subscription": "The user-approved hands-on subscription",
+      "filters": "Exact test resource names; loaded 0/0, not an empty loading state",
+      "resourceGroup": "absent",
+      "virtualMachine": "absent",
+      "bastion": "absent",
+      "publicIp": "absent",
+      "osDisk": "absent",
+      "diskNavigation": "Disks > Storage center / Azure Disks > Resources tab"
+    },
+    "rgExists": false,
+    "rgAbsenceObservedAtUtc": "2026-11-02T12:36:29Z",
+    "subscriptionResourceScan": {
+      "matchingNameFragment": "audit1102",
+      "remainingMatches": [],
+      "nextLink": null
+    },
+    "eightCreatedResources": [
+      "vnet-hol02-audit1102",
+      "key-hol02-audit1102",
+      "vm-hol02-audit1102-nsg",
+      "vm-hol02-audit1102924",
+      "vm-hol02-audit1102",
+      "vm-hol02-audit1102_OsDisk_1_904e08da4da44876bc474befb2dfe44a",
+      "pip-bas-hol02-audit1102",
+      "bas-hol02-audit1102"
+    ],
+    "temporaryKeysAbsent": true,
+    "verificationBrowserStopped": true,
+    "dedicatedAuthenticatedBrowserProfileRemoved": true,
+    "threeRawCapturesRemoved": true,
+    "normalUserBrowserProfileUntouched": true,
+    "existingAzureResourcesPoliciesAndRolesChanged": false
+  },
+  "limitations": {
+    "noviceUnaidedObservationExecuted": false,
+    "noviceCompletionTimeMeasured": false,
+    "actualInvoiceReviewed": false,
+    "allParticipantDevicesAndNetworksTested": false,
+    "allPortalScreensCapturedForPublication": false,
+    "historical20261012EvidenceOverwritten": false,
+    "portalLabelsAndDefaultsMayChange": true
+  },
+  "materialsEvidence": "materials-validation-2026-11-02.json",
+  "publicEvidenceExcludes": [
+    "subscription UUID",
+    "account and tenant identifiers",
+    "actual machine IP addresses",
+    "credentials and private key material",
+    "authentication URLs and tokens"
+  ]
+}
