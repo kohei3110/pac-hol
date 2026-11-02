@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-02",
+  "method": "Actual Azure Portal lifecycle in user-authenticated isolated native Chrome, operated through local CDP; read-only Azure CLI corroboration. Not a CLI-created VM or a simulated Portal screen.",
+  "resourceGroup": "rg-hol01-audit1102",
+  "vmName": "vm-hol01-audit1102",
+  "configuration": {
+    "location": "japaneast",
+    "size": "Standard_D2alds_v6",
+    "imageVersion": "24.04.202610210",
+    "osDiskSku": "StandardSSD_LRS",
+    "osDiskGiB": 30,
+    "diskSizeField": "diskSizeGB"
+  },
+  "checks": {
+    "provisioningSucceeded": true,
+    "running": true,
+    "exactSixResourceTypes": true,
+    "resourceGroupTags": true,
+    "allResourceTags": true,
+    "approvedRegion": true,
+    "exactSize": true,
+    "ubuntu2404Canonical": true,
+    "linuxGen2": true,
+    "trustedLaunch": true,
+    "secureBootAndVtpm": true,
+    "noSpot": true,
+    "noAvailabilityZone": true,
+    "passwordAuthenticationDisabled": true,
+    "oneSshKey": true,
+    "rsaPublicKey": true,
+    "privateKeyDownloaded": true,
+    "privateKeyPermissions": true,
+    "standardSsdLrs": true,
+    "imageSizedOsDisk": true,
+    "noDataDisks": true,
+    "osDiskDeleteWithVm": true,
+    "platformManagedEncryption": true,
+    "nvme": true,
+    "acceleratedNetworking": true,
+    "nsgAttached": true,
+    "noNicPublicIp": true,
+    "noCustomNsgRules": true,
+    "exactVnetRange": true,
+    "exactSubnet": true,
+    "managedBootDiagnostics": true,
+    "noVmExtensions": true,
+    "noManagedIdentity": true,
+    "deallocated": true,
+    "vmRemainsAfterDeallocation": true,
+    "diskRemainsAfterDeallocation": true,
+    "sixResourcesRemainAfterDeallocation": true,
+    "downloadedPrivateKeyRemoved": true,
+    "validationKeyPairRemoved": true,
+    "temporaryBrowserProfileRemoved": true,
+    "testKeyAbsentFromOriginalDownloads": true,
+    "resourceGroupAbsent": true,
+    "allSixOriginalResourcesNotFound": true,
+    "existingNetworkWatcherCountUnchanged": true,
+    "portalLifecycleVerified": true
+  },
+  "portalChecks": {
+    "subscriptionConfirmed": true,
+    "emptyTaggedRgCreated": true,
+    "previewToClassicEntryVerified": true,
+    "sizeSearchGroupExpandedAndSelected": true,
+    "newRsaReviewValidationSucceeded": true,
+    "rsaPemDownloadedWithoutInspection": true,
+    "deploymentCompleteMessage": true,
+    "vmRunningOverview": true,
+    "ssdCapacityAndNicSubnetInspected": true,
+    "sixResourcesVisible": true,
+    "stopConfirmedAndDeallocatedVisible": true,
+    "postStopResourcesRemainVisible": true,
+    "rgParticipantAndDeletionScopeChecked": true,
+    "secondIrreversibleDeleteDialogConfirmed": true,
+    "deletionSuccessNotification": true,
+    "refreshedScopedRgListZeroMatches": true,
+    "refreshedScopedVmListZeroMatches": true
+  },
+  "observations": {
+    "portalDeploymentDuration": "PT2M45.2144756S",
+    "portalDeploymentSucceededUtc": "2026-11-02T05:05:07.630456+00:00",
+    "runningChecksUtc": "2026-11-02T05:12:02.998114+00:00",
+    "deallocatedChecksUtc": "2026-11-02T05:15:09.147146+00:00",
+    "cleanupChecksUtc": "2026-11-02T05:29:59.725811+00:00",
+    "portalFinalAbsenceCheckUtc": "2026-11-02T05:40:58Z",
+    "defaultSizeUnavailable": "The default D2s_v3 showed NotAvailableForSubscription; selecting the documented D2alds_v6 cleared it.",
+    "collapsedSizeGroup": "Searching returned one size inside a collapsed D-series-v6 group; expanding the group and applying Select were necessary.",
+    "wizardVnetApiVersion": "2024-10-01",
+    "subnetDefaultOutboundAccess": null,
+    "defaultOutboundIpWarningObserved": true,
+    "outboundConnectivityTested": false,
+    "outboundDisabledGuaranteed": false,
+    "networkChoice": "User explicitly retained the short wizard path and requested accurate wording rather than separate private-subnet provisioning.",
+    "tagTargetCandidateCount": 13,
+    "actualCreatedResourceCount": 6,
+    "secondRgDeleteConfirmationRequired": true,
+    "rsaKeyFailureReproduced": false,
+    "staffCliDeviceCodeError": "530035 observed during user sign-in; browser-based login succeeded without disabling security defaults.",
+    "priorityField": {
+      "returnedPriority": null,
+      "note": "The regular VM's optional priority field is omitted by this API response; Portal explicitly showed Azure Spot=No and no Spot billing profile is present."
+    },
+    "diskSizeField": "diskSizeGB"
+  },
+  "resourceCounts": {
+    "Microsoft.Compute/disks": 1,
+    "Microsoft.Compute/sshPublicKeys": 1,
+    "Microsoft.Compute/virtualMachines": 1,
+    "Microsoft.Network/networkInterfaces": 1,
+    "Microsoft.Network/networkSecurityGroups": 1,
+    "Microsoft.Network/virtualNetworks": 1
+  },
+  "resourceAbsenceChecks": [
+    {
+      "type": "Microsoft.Compute/sshPublicKeys",
+      "notFound": true,
+      "errorCode": "ResourceNotFound"
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "notFound": true,
+      "errorCode": "ResourceNotFound"
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "notFound": true,
+      "errorCode": "ResourceGroupNotFound"
+    },
+    {
+      "type": "Microsoft.Network/networkInterfaces",
+      "notFound": true,
+      "errorCode": "ResourceNotFound"
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "notFound": true,
+      "errorCode": "ResourceGroupNotFound"
+    },
+    {
+      "type": "Microsoft.Compute/disks",
+      "notFound": true,
+      "errorCode": "ResourceGroupNotFound"
+    }
+  ],
+  "networkWatcherCountBefore": 1,
+  "networkWatcherCountAfter": 1,
+  "cleanupVerified": true,
+  "temporaryKeysAndBrowserProfileRemoved": true,
+  "privateKeyContentsInspected": false,
+  "completedChecks": 45,
+  "requiredChecks": 45,
+  "limitations": [
+    "No independent first-time-Azure-user usability test; the stated lesson duration is not a measured novice completion time.",
+    "Other subscriptions, regions, quota shortages, stock failures, policy denials and deletion-lock failures were not all deliberately reproduced; recovery instructions are based on official Docs.",
+    "No guest login, SSH reachability, application operation or internet-egress test; these are outside lesson one.",
+    "Actual invoiced charges have not been verified."
+  ],
+  "passed": true
+}

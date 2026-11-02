@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-02",
+  "timestamp": "2026-11-02T07:59:06.785423+00:00",
+  "method": "Source-to-HTML full-text and image parity, real Chrome rendering/controls/print, PDF extraction and bounds, official Docs HTTP checks; visual page review is a separate final gate",
+  "status": "complete",
+  "checks": {
+    "noUnrenderedMarkdownBoldMarkers": true,
+    "markdownHtmlExactText_participant": true,
+    "markdownHtmlExactText_instructor": true,
+    "markdownHtmlExactText_validation": true,
+    "markdownHtmlExactText_screenshots": true,
+    "markdownHtmlExactText_self-study": true,
+    "markdownHtmlImageAndAltParity": true,
+    "allInternalAnchorsResolve": true,
+    "allLocalLinkedFilesExist": true,
+    "currentDiagramSsdAndOfficialIconsPreserved": true,
+    "imageHashesAndPrivacyReview": true,
+    "seventeenOfflineImagesEmbedded": true,
+    "sourceChecklistParity": true,
+    "allPrintedSourceTextBlocksPresent": true,
+    "criticalStepsAndOpenAnswerPrinted": true,
+    "darkModePrintHasSameRequiredContent": true,
+    "onlyParticipantAndCommonAppendixPrinted": true,
+    "noPdfReplacementCharacters": true,
+    "pdfTextWithinA4PageBounds": true,
+    "pdfHasAllExpectedImages": true,
+    "allOfficialDocsReferencesReachable": true,
+    "desktopMobileLightDarkAndControls": true,
+    "printHooksAndLightPaperFromDarkTheme": true,
+    "noActualAccountSubscriptionOrPrivateKeyText": true,
+    "pdfLayoutVisuallyReviewed": true
+  },
+  "printedSourceTextBlocksChecked": 628,
+  "pdfPages": 36,
+  "expectedTaskNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "expectedCheckboxes": 21,
+  "expectedParticipantImages": 17,
+  "officialDocsReferences": [
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/en-us/azure/architecture/icons/"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/management/delete-resource-group",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/management/delete-resource-group"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/templates/deployment-history-deletions",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/templates/deployment-history-deletions"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/common-deployment-errors",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/common-deployment-errors"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-register-resource-provider",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-register-resource-provider"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-resource-quota",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-resource-quota"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-sku-not-available",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/error-sku-not-available"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/find-error-code",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/azure-resource-manager/troubleshooting/find-error-code"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/check-access",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/check-access"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/troubleshooting",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/role-based-access-control/troubleshooting"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-hdd-os-retirement",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-hdd-os-retirement"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/quick-create-portal",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/quick-create-portal"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/daldsv6-series",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/daldsv6-series"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ssh-keys-portal",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ssh-keys-portal"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/states-billing",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/states-billing"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/ip-services/default-outbound-access",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/azure/virtual-network/ip-services/default-outbound-access"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/cli/azure/authenticate-azure-cli-interactively",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/cli/azure/authenticate-azure-cli-interactively"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/entra/fundamentals/security-defaults",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/entra/fundamentals/security-defaults"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/entra/identity-platform/reference-error-codes",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/entra/identity-platform/reference-error-codes"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/troubleshoot/azure/virtual-machines/windows/allocation-failure",
+      "status": 200,
+      "resolvedUrl": "https://learn.microsoft.com/ja-jp/troubleshoot/azure/virtual-machines/windows/allocation-failure"
+    }
+  ],
+  "localLinkedFiles": [
+    "01-vm/assets/live-validation-20261102.json",
+    "01-vm/assets/materials-validation-20261102.json"
+  ],
+  "browser": {
+    "timestamp": "2026-11-02T07:58:57.678Z",
+    "observations": [
+      {
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "allImagesLoaded": true,
+        "participantImageCount": 17,
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "checkboxCount": 21,
+        "duplicateIds": false,
+        "brokenAnchors": [],
+        "hintContrast": 4.5801654216576475,
+        "overflowingCode": false
+      },
+      {
+        "theme": "light",
+        "width": 390,
+        "scrollWidth": 390,
+        "allImagesLoaded": true,
+        "participantImageCount": 17,
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "checkboxCount": 21,
+        "duplicateIds": false,
+        "brokenAnchors": [],
+        "hintContrast": 4.5801654216576475,
+        "overflowingCode": false
+      },
+      {
+        "theme": "dark",
+        "width": 390,
+        "scrollWidth": 390,
+        "allImagesLoaded": true,
+        "participantImageCount": 17,
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "checkboxCount": 21,
+        "duplicateIds": false,
+        "brokenAnchors": [],
+        "hintContrast": 5.136626616638519,
+        "overflowingCode": false
+      },
+      {
+        "theme": "dark",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "allImagesLoaded": true,
+        "participantImageCount": 17,
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "checkboxCount": 21,
+        "duplicateIds": false,
+        "brokenAnchors": [],
+        "hintContrast": 5.136626616638519,
+        "overflowingCode": false
+      }
+    ],
+    "controls": {
+      "incremented": true,
+      "reset": true,
+      "imageViewerOpened": true,
+      "imageViewerClosed": true,
+      "keyboardEnterOpened": true,
+      "escapeClosed": true
+    },
+    "printHooks": {
+      "detailsExpanded": true,
+      "hiddenSupplementLinksRemoved": true,
+      "detailsRestored": true,
+      "linksRestored": true
+    },
+    "printStyle": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(36, 36, 36)",
+      "commonPrinted": true,
+      "instructorHidden": true,
+      "evidenceHidden": true,
+      "sourcesHidden": true,
+      "tableHeaderRepeats": true
+    },
+    "javascriptExceptions": [],
+    "passed": true
+  },
+  "sourceSha256": {
+    "01-vm/assets/20261102-vm-resources.excalidraw": "45ecda469b543475ff461bbb1254b6e2d704e425ffb2e5208559206d17a36f30",
+    "01-vm/assets/live-validation-20261102.json": "564c829aded7e9567bfeca4f986daa0657a822e9a241dba27355d1e8f7d13aec",
+    "01-vm/assets/manifest.json": "7a2171997d8123efec428c0954945d0f602d585d7a059d5a6f14ab6dabcc0707",
+    "01-vm/guide.html": "10ee9dfb8802305c170417f8f8d2a5e62b854fa0151f4fa08335d968cbda5f9a",
+    "01-vm/guide.md": "1240dc48819066930504098c32b04b6444eb372353a263f02c58ee184cce2512",
+    "01-vm/guide.pdf": "71299b7e732886970413bb876ede90088ba083ab63be6b7219e4625bfd338b8e",
+    "01-vm/instructor-guide.md": "8d989ad895aab29e243becdfdb97cd64d856f26a269f5044b1867be95ed7dc16",
+    "01-vm/run-through.md": "7a0a0901a63a56111dd3143d650b1cf429b5c4b73bb2cd71276fc9297fb68b76",
+    "01-vm/screenshots.md": "ab69026f077d4ed519668516ca33edd26710bdd2e5d72db299291a9de294265c",
+    "self-study.md": "c3257f54121e82a3378a8ac7cf7219c6c187a7c68d973f6385ffd060a7246074"
+  },
+  "automatedPassed": true,
+  "passed": true,
+  "visualReview": {
+    "allPrintedPages": true,
+    "currentScreenshots": true,
+    "note": "All pages reviewed in rendered contact sheets; critical pages inspected at reading resolution. Current screenshot crops and privacy masks reviewed separately."
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-11-02",
   "icons": {
     "resource-group": {
       "label": "Azure Resource Groups",
@@ -245,6 +245,642 @@
       "opaqueMasks": [],
       "annotations": [],
       "sha256": "9a722b90f6714687bf2dad805d40742abb643399d23184e999fe29acec656117"
+    },
+    "portal/20261102-basics.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:51:50.204664+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "79c4a9d9ee873386d604c373164e5c68bf9ba74836f19c888febbc6a38858a0c",
+      "cropSourcePixels": [
+        36,
+        295,
+        1555,
+        1421
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "03871777d18d3e33dbf3b1e510ed7a1a976d5508b4ddcb90bb5e838e195e709a",
+      "width": 1519,
+      "height": 1126,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-ssh-and-ports.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:52:00.674458+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "28cd7c08fcf7f8a6d1f87523a83aa4b5dcfa8820bf4c276c8440efa67d4b995b",
+      "cropSourcePixels": [
+        36,
+        295,
+        1555,
+        1433
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "e6c25fb3011a6a03dbabb78275b392f4c0a2cda63059e4453caa861940f38212",
+      "width": 1519,
+      "height": 1138,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-os-disk.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:52:35.124192+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 4"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "6c4e9e94e0a2604a20bc58ce9a813912aca6c7e69e32d4db397df92e50591343",
+      "cropSourcePixels": [
+        36,
+        288,
+        1555,
+        1169
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "87086762e775b07e007599828dafde86ba57cffb0f4b96a95f9c7564409aa003",
+      "width": 1519,
+      "height": 881,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-vnet.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:54:08.881752+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 4"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "7ef1086226c2a4c7090cb0cbf4f025f8ecf1fa2124cde8e956dbf90ed1b9b8d8",
+      "cropSourcePixels": [
+        1181,
+        92,
+        2873,
+        1562
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "66ed6fbb091b3d176be2d81e0fb055781b3534dd94570baa212024e8a928b568",
+      "width": 1692,
+      "height": 1470,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-network.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:54:56.151803+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 4"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "68d6ba12b8508ee02916b624e432a2627646e1019f5d49b6a8556297dd0a05f3",
+      "cropSourcePixels": [
+        36,
+        292,
+        1555,
+        1123
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "3dbd5789baf3a7ea5dbefed1af81d0476c0fd8703af0436958a1630b479f5882",
+      "width": 1519,
+      "height": 831,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-monitoring.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:55:21.098064+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 5"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "a51266c3111b2659a2ec4402084840dc79b31692f654e68974b8901728b4d978",
+      "cropSourcePixels": [
+        36,
+        305,
+        1555,
+        1166
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "226f55f412898a89b1e374fe8dee3d43d42a45bb4c79b25b514ab6de1cc120d5",
+      "width": 1519,
+      "height": 861,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-nvme.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:55:38.946892+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "creation-form",
+      "illustrates": [
+        "Task 5"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "068de80dec1ce70dc4de2797f85ad554ba1799636511ec2db1752969e949bde5",
+      "cropSourcePixels": [
+        36,
+        670,
+        1555,
+        914
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "cf41ac2e3a5f18ec014466ecdeb6c61ed3899398c8bb7df5223cbd6cb7e294fe",
+      "width": 1519,
+      "height": 244,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-size-picker.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T04:50:53.862141+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "size-selection-before-creation",
+      "illustrates": [
+        "Task 3"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "ceb993098ed2cc93f94b2d5b48d66d1f15eb6ab66a467fbc983e8eab7cc2d2a9",
+      "cropSourcePixels": [
+        29,
+        302,
+        1469,
+        770
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            681,
+            389,
+            932,
+            428
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "9c8d081d29d750f8e567e6ea8a818c9167e5eb4cd1aa64bd63a8fc34b4b9318d",
+      "width": 1440,
+      "height": 468,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-deployment-complete.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:08:32.465208+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "deployment-succeeded",
+      "illustrates": [
+        "Task 6"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "9e0db57c0e0a7f1976827c9888b4a383409babfab386e4152c8b5d70a02b4c0c",
+      "cropSourcePixels": [
+        569,
+        360,
+        2138,
+        1022
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            907,
+            487,
+            1214,
+            533
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        },
+        {
+          "rectangleSourcePixels": [
+            1604,
+            487,
+            2120,
+            533
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "baad495c99d622c94c428646040dd1d8275c8f66edf85b18f26c1f33fb3b1cdf",
+      "width": 1569,
+      "height": 662,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-vm-running.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:10:44.815866+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "vm-running",
+      "illustrates": [
+        "Task 7"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "df2724ae6bc96dd68d599e34f3fcc203ca998d4fb0f7f9747c8459775bc15917",
+      "cropSourcePixels": [
+        605,
+        531,
+        1634,
+        912
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            929,
+            772,
+            1303,
+            818
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        },
+        {
+          "rectangleSourcePixels": [
+            927,
+            828,
+            1606,
+            877
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "27232874a71637f84a8e8ebd68380fb15392c79517ba6b18cf0d3e62d6d1625a",
+      "width": 1029,
+      "height": 381,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-vm-settings.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:10:44.815866+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "vm-running",
+      "illustrates": [
+        "Task 7"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "df2724ae6bc96dd68d599e34f3fcc203ca998d4fb0f7f9747c8459775bc15917",
+      "cropSourcePixels": [
+        1728,
+        590,
+        2830,
+        1044
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "a71979b7850e497ec084a4e219153023a4a091f9b2e54b82ac74d59842830269",
+      "width": 1102,
+      "height": 454,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-resources.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:12:30.836933+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "six-resources-created",
+      "illustrates": [
+        "Task 8"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "bd0ed43c071570e320fa6f160465e204e854e6f0125cea5564d1d5ecbede8de7",
+      "cropSourcePixels": [
+        720,
+        684,
+        2203,
+        1303
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            1174,
+            1133,
+            1613,
+            1182
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "b5d24ea89114a659d425691ee5c740da867b5a7ee51ff697805627d871534e2a",
+      "width": 1483,
+      "height": 619,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-vm-deallocated.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:16:54.450758+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "vm-deallocated",
+      "illustrates": [
+        "Task 9"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "ece932cc99d66ee81a4900fca58edfb8e54ff1a4f1608a5aa3fb47b47c6b62f6",
+      "cropSourcePixels": [
+        605,
+        531,
+        1634,
+        912
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            929,
+            772,
+            1303,
+            818
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        },
+        {
+          "rectangleSourcePixels": [
+            927,
+            828,
+            1606,
+            877
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "2a73365d9d1d743afee612e048608e449405fd8be655810979e381169a069be3",
+      "width": 1029,
+      "height": 381,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-delete-rg.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:24:04.317058+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "approved-rg-deletion-before-final-confirmation",
+      "illustrates": [
+        "Task 10"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "d7f2bfaaa4ead44762e552f80848d5ecc4a5585d24e32275a5bc79608392666a",
+      "cropSourcePixels": [
+        1174,
+        92,
+        2873,
+        1562
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            2056,
+            691,
+            2359,
+            1064
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "349448841c42f8e9c2f2df9558474c91c8e253d905cb769dfe43173223eeee33",
+      "width": 1699,
+      "height": 1470,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "portal/20261102-deleted-rg.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-02T05:34:17.872911+00:00",
+      "sourceUrl": "https://portal.azure.com/",
+      "sourceMethod": "User-authenticated isolated visible native Chrome; normal Portal UI operated through local CDP. No browser security settings changed. Lossless cropping and opaque privacy masks only.",
+      "uiLanguage": "ja-JP",
+      "captureScope": "deleted-rg-filtered-zero-results",
+      "illustrates": [
+        "Task 11"
+      ],
+      "sourcePixels": [
+        2880,
+        1574
+      ],
+      "sourceSha256": "d88d479ecf6d97ecfd90de4f763f3935b3984faedfb37a86a13c1eec0dd11fb9",
+      "cropSourcePixels": [
+        562,
+        266,
+        2275,
+        1008
+      ],
+      "removed": [
+        "browser/account/directory header and unrelated screen regions outside crop"
+      ],
+      "opaqueMasks": [
+        {
+          "rectangleSourcePixels": [
+            1547,
+            370,
+            1778,
+            428
+          ],
+          "reason": "subscription display name, subscription/correlation ID, or autogenerated disk-name suffix"
+        }
+      ],
+      "settingsRedrawn": false,
+      "annotations": [],
+      "reviewed": true,
+      "rawSourceRemoved": true,
+      "sha256": "7c94a022176a9891d398d4f0710ad14a0266931f97ff769fea9bc97c30e8f93d",
+      "width": 1713,
+      "height": 742,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00",
+      "rawSourceRemovedAt": "2026-11-02T06:34:48.951791+00:00"
+    },
+    "20261102-vm-resources.png": {
+      "kind": "educational-diagram-not-portal",
+      "updated": "2026-11-02",
+      "officialIconSet": "Azure Public Service Icons V24",
+      "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+      "editableSource": "20261102-vm-resources.excalidraw",
+      "editableSourceSha256": "45ecda469b543475ff461bbb1254b6e2d704e425ffb2e5208559206d17a36f30",
+      "sha256": "ccba76e9d599932fa5fd9fcf71569f729c4d3959f43bd4b0fa295f1bdc430ef3",
+      "revision": "OS disk label changed from HDD to SSD to match the current lesson. Other scene geometry and original embedded icon data preserved; rendered locally from the edited scene.",
+      "sourceMethod": "Local SVG rendition of the editable Excalidraw scene, rasterized by headless Chrome; not a Portal screenshot.",
+      "officialIconBytesUnchanged": true,
+      "reviewed": true,
+      "reviewedAt": "2026-11-02T06:34:48.951791+00:00"
     }
   },
   "pendingScreenshots": [
