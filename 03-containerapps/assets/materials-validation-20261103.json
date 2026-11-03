@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-02T22:14:35.554Z",
+  "method": "Fresh offline guide pages in isolated Chrome; actual DOM, controls and print CSS, not Azure proof",
+  "observations": [
+    {
+      "width": 390,
+      "theme": "light",
+      "scrollWidth": 390,
+      "missingImages": 0,
+      "brokenAnchors": [],
+      "taskNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mathSpans": 0,
+      "rawEmphasis": false,
+      "costTextPresent": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "scrollWidth": 390,
+      "missingImages": 0,
+      "brokenAnchors": [],
+      "taskNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mathSpans": 0,
+      "rawEmphasis": false,
+      "costTextPresent": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "scrollWidth": 1440,
+      "missingImages": 0,
+      "brokenAnchors": [],
+      "taskNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mathSpans": 0,
+      "rawEmphasis": false,
+      "costTextPresent": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "scrollWidth": 1440,
+      "missingImages": 0,
+      "brokenAnchors": [],
+      "taskNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mathSpans": 0,
+      "rawEmphasis": false,
+      "costTextPresent": true
+    }
+  ],
+  "checked": true,
+  "reset": true,
+  "imageOpens": true,
+  "imageCloses": true,
+  "print": {
+    "participantVisible": true,
+    "supplementsHidden": true,
+    "commonInstructionsVisible": true
+  },
+  "errors": [],
+  "passed": true,
+  "contentComparison": {
+    "normalization": [
+      "Unicode NFKC",
+      "whitespace removal",
+      "soft hyphen removal"
+    ],
+    "method": "All five Markdown sources independently rendered by Pandoc and compared with full HTML section text; every participant/common paragraph, heading, table cell, list item and answer block located in the actual PDF raw text",
+    "sections": [
+      {
+        "section": "participant",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacterCount": 14074,
+        "pdfTextBlocks": 346,
+        "pdfMissingBlocks": 0
+      },
+      {
+        "section": "instructor",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacterCount": 4293
+      },
+      {
+        "section": "validation",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacterCount": 6438
+      },
+      {
+        "section": "screenshots",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacterCount": 3245
+      },
+      {
+        "section": "self-study",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacterCount": 3486,
+        "pdfTextBlocks": 99,
+        "pdfMissingBlocks": 0
+      }
+    ],
+    "missingPdfText": [],
+    "pdfPages": 26,
+    "pdfImages": 12,
+    "expectedPdfImages": 12,
+    "manifestHashErrors": [],
+    "artifactSha256": {
+      "guide.md": "e49ba431d830e81cbd4cdf88372ab1c0a39d9127993105e666e232d3bfecec4a",
+      "guide.html": "e75b441872c091f2fae313a8de67004d8486af49c91eb391bd0cb55fdf261600",
+      "guide.pdf": "0daa0f608d78c3b6d4837689579ee3c531b40883908726b2f6d45c5db0e0ec9b"
+    },
+    "visualReview": {
+      "method": "Actual final PDF rasterized with pdftoppm and visually inspected by the agent, not an independent beginner test",
+      "reviewedPdfSha256": "0daa0f608d78c3b6d4837689579ee3c531b40883908726b2f6d45c5db0e0ec9b",
+      "pages": [
+        2,
+        13,
+        15,
+        20,
+        23
+      ],
+      "areas": [
+        "pricing and emphasis",
+        "Multiple mode and revision creation",
+        "scale screenshot and preview instructions",
+        "printed answer examples",
+        "printed common preparation"
+      ],
+      "issues": [],
+      "scope": "Representative-page visual review; every participant/common text block and all 12 images were checked separately"
+    },
+    "passed": true
+  }
+}

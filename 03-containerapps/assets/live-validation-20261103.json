@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-03",
+  "dateTimezone": "Asia/Tokyo; individual observation timestamps are UTC",
+  "scope": "Dedicated user-approved audit RG in Japan East; no existing shared resource was changed",
+  "method": "User-authenticated dedicated Chrome and ordinary Azure Portal UI actions through Playwright; CLI and ARM used only for preflight/read-only corroboration",
+  "approvals": {
+    "subscriptionAndRegion": true,
+    "newResourcesAndPotentialCost": true,
+    "separateExactResourceGroupDeletion": true
+  },
+  "preflight": {
+    "armValidate": "passed",
+    "whatIf": "3 Create only: new RG, environment and app",
+    "consumptionCoreLimit": 100,
+    "maximumCoresForTwoVersions": 0.5
+  },
+  "portalActions": [
+    "Created dedicated RG and verified its three tags",
+    "Created Consumption-only environment and old sample app; Portal deployment completed",
+    "Changed initial maximum replicas from 10 to 1 using Save as new revision",
+    "Selected Deployment mode > Multiple revisions and refreshed the list",
+    "Confirmed concrete capped old revision receives 100%; not Latest",
+    "Created v2 from capped old revision, changing image tag and display variable",
+    "Saved preview in the v2 label column at 0% and read its actual label URL from revision details",
+    "Saved old 0% / new 100%, then old 100% / new 0%",
+    "Confirmed and corrected three app tags through actual tag-grid candidate selection",
+    "Verified exact RG inventory contains only app and environment",
+    "Entered approved RG name, clicked Delete and confirmed the additional Delete confirmation",
+    "Refreshed and filtered RG, app and environment Portal lists; each showed 0/0 in the approved subscription",
+    "Read the actual Portal resource-group deletion-success notification"
+  ],
+  "versions": [
+    {
+      "revisionAlias": "old--0000001",
+      "imageTag": "fb699ef",
+      "displayCommit": "fb699ef",
+      "cpu": 0.25,
+      "memory": "0.5Gi",
+      "minReplicas": 0,
+      "maxReplicas": 1,
+      "active": true,
+      "health": "Healthy"
+    },
+    {
+      "revisionAlias": "new--v2",
+      "imageTag": "c6f1515",
+      "displayCommit": "c6f1515",
+      "cpu": 0.25,
+      "memory": "0.5Gi",
+      "minReplicas": 0,
+      "maxReplicas": 1,
+      "active": true,
+      "health": "Healthy"
+    }
+  ],
+  "finalTraffic": [
+    {
+      "revisionAlias": "new--v2",
+      "label": "preview",
+      "weight": 0
+    },
+    {
+      "revisionAlias": "old--0000001",
+      "label": "label-1",
+      "weight": 100
+    }
+  ],
+  "httpStages": [
+    {
+      "stage": "initial",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "date": "2026-11-02T15:49:25.289628+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:49:28.635626+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:49:31.697074+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "pinned",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "date": "2026-11-02T15:49:56.327697+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:49:59.425596+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:50:02.491033+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "still-old",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "date": "2026-11-02T15:51:59.937603+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:52:03.026541+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:52:06.099245+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "preview",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "date": "2026-11-02T15:52:06.226263+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:09.453954+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:12.519617+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "switched-new",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "date": "2026-11-02T15:52:19.761968+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:52:22.838357+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:52:25.908400+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:52:28.965452+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:32.019015+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:35.089021+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "preview-after-switch",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "date": "2026-11-02T15:52:35.247209+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:38.308923+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:41.387234+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "rollback",
+      "expectedCommit": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "date": "2026-11-02T15:52:48.997667+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:52.062575+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:55.115055+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:52:58.181814+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:53:01.240306+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "date": "2026-11-02T15:53:04.294866+00:00",
+          "status": 200,
+          "commit": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    },
+    {
+      "stage": "preview-after-rollback",
+      "expectedCommit": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "date": "2026-11-02T15:53:04.427561+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:53:07.431609+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "date": "2026-11-02T15:53:10.494725+00:00",
+          "status": 200,
+          "commit": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "consecutiveMatches": 3,
+      "passed": true
+    }
+  ],
+  "cleanup": {
+    "approvedDedicatedGroupOnly": true,
+    "inventoryBeforeDeletion": {
+      "containerApps": 1,
+      "managedEnvironments": 1,
+      "otherResources": 0
+    },
+    "portalDeletionSubmittedAt": "2026-11-02T21:46:23.034Z",
+    "completionObservedAt": "2026-11-02T22:11:26Z",
+    "submissionToCompletionObservationSeconds": 1502.966,
+    "resourceGroupAbsent": true,
+    "remainingAppMatches": 0,
+    "remainingEnvironmentMatches": 0,
+    "subscriptionListsPaginationExhausted": true,
+    "portalListChecks": [
+      {
+        "list": "environments",
+        "status": "0/0 を表示中",
+        "approvedSubscriptionConfirmed": true,
+        "checkedAt": "2026-11-02T22:12:18.480Z"
+      },
+      {
+        "list": "resourceGroups",
+        "status": "0/0 を表示中",
+        "approvedSubscriptionConfirmed": true,
+        "checkedAt": "2026-11-02T22:12:38.683Z"
+      },
+      {
+        "list": "containerApps",
+        "status": "0/0 を表示中",
+        "approvedSubscriptionConfirmed": true,
+        "checkedAt": "2026-11-02T22:12:53.857Z"
+      }
+    ],
+    "portalDeletionSucceeded": true,
+    "checkedAt": "2026-11-02T22:13:26.379909+00:00",
+    "otherResourceGroupsDeleted": false,
+    "passed": true
+  },
+  "checks": {
+    "multipleMode": true,
+    "identityNone": true,
+    "noSecrets": true,
+    "noRegistryCredentials": true,
+    "externalIngress": true,
+    "ingressTransportAuto": true,
+    "targetPort80": true,
+    "insecureHttpDisabled": true,
+    "sessionAffinityDisabled": true,
+    "consumptionOnly": true,
+    "noLogStorage": true,
+    "publicNetworkAccessEnabled": true,
+    "noVnetIntegration": true,
+    "zoneRedundancyDisabled": true,
+    "twoActiveVersions": true,
+    "appTagsConfirmed": true,
+    "old--0000001Configuration": true,
+    "new--v2Configuration": true,
+    "eightHttpStages": true,
+    "threeConsecutiveMatchingHttp200PerStage": true,
+    "cleanupCompleted": true
+  },
+  "passed": true,
+  "limitations": [
+    "No independent unassisted beginner user test or participant timing measurement",
+    "No revalidation of the shared PowerPoint",
+    "No actual billing measurement; elapsed time included user sign-in and approval waits",
+    "Four genuine screenshots cover revision scale and traffic, not every screen",
+    "Browser Canvas could not operate the Portal form; user signed in to a dedicated native Chrome instead",
+    "Portal review showed a stale workspace name despite no-log setting; read-only template and actual inventory had no workspace",
+    "Revision aliases omit resource names; actual URLs, subscription IDs and complete environment variables are not published"
+  ]
+}
