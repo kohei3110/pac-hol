@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-11-04",
   "icons": {
     "virtual-network": {
       "label": "Azure Virtual Networks",
@@ -75,6 +75,97 @@
     }
   },
   "images": {
+    "portal/20261104-deletion-complete.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-04",
+      "state": "actual dedicated RG deletion success notification, independently corroborated by five empty filtered Portal lists and absence of both RGs",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual Portal notification content only; not a CLI-generated or synthetic confirmation",
+      "removed": ["browser/account/directory header and all content outside notification"],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "2cdcf04d7611f8f172f57b40f554f50ffef9f2d917df840fdc058d1baeb6c518"
+    },
+    "portal/20261103-storage-configuration.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-04",
+      "state": "deployed participant ZIP Storage: secure transfer enabled, anonymous and Shared Key access disabled",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "authenticated isolated native Chrome; read-only Portal configuration; cropped actual pane, no synthetic UI",
+      "cropSourcePixels": [0, 0, 1200, 620],
+      "removed": ["browser/account/directory header outside pane", "unused right and lower pane"],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "e7526afbea1d9c7757ed89ebb9d4a2912e3ad3fcd96728d023e3e356db7061f3"
+    },
+    "portal/20261103-storage-configuration-lower.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-03",
+      "state": "deployed Storage lower configuration: default Entra authorization enabled, minimum TLS 1.2",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual read-only configuration pane after scrolling, not a creation form",
+      "cropSourcePixels": [0, 0, 1500, 1150],
+      "removed": ["browser/account/directory header outside pane", "unused right and lower pane"],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "f52a6ce9f49f8cda006856b7c76e360da8824438533edf4c14a3396820376cf3"
+    },
+    "portal/20261103-storage-network.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-03",
+      "state": "actual deployed Storage public network access Disabled",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual read-only Portal networking pane",
+      "removed": ["browser/account/directory header outside pane"],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "03e7873850b9f20a5d799e504ba0b0b14ea500766c9e45f76f71bb6a758b35c2"
+    },
+    "portal/20261103-private-endpoint.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-03",
+      "state": "deployed Blob private endpoint connection Approved",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual read-only Portal private endpoint connections tab",
+      "removed": ["browser/account/directory header outside pane"],
+      "opaqueMasks": [{"reason": "opaque mask over generated private endpoint connection identifier"}],
+      "annotations": [],
+      "sha256": "e7f8734aa1bd67aeafb35ad5ceae6334643b862e3587f52f53529b34aee3b2d4"
+    },
+    "portal/20261103-identity-roles.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-04",
+      "state": "actual managed identity Azure role assignments: uploads container-scoped Blob Data Contributor and registry-scoped AcrPull",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual identity Azure role assignments pane; wide viewport makes full role and uploads scope readable",
+      "cropSourcePixels": [0, 0, 2100, 380],
+      "removed": ["browser/account/directory header outside pane", "unused bottom and part of the conditions column"],
+      "opaqueMasks": [{"reason": "subscription display-name selector"}],
+      "annotations": [],
+      "sha256": "8c035d61521fa29a8eb74a7438e3ff8c9c893cf202e4975d080b957ac8a78d76"
+    },
+    "portal/20261104-delete-confirmation.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-04",
+      "state": "approved dedicated RG and its ten dependencies; RG name entered before first Delete",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual Portal deletion pane after separate user approval",
+      "removed": ["browser/account/directory header outside pane"],
+      "opaqueMasks": [{"reason": "subscription display names and generated NIC identifier"}],
+      "annotations": [],
+      "sha256": "f1aa56e97311189541abd5934f592f822eddeca8e2f2d247216d6957e63ecb8b"
+    },
+    "portal/20261104-delete-final-confirmation.png": {
+      "kind": "genuine-azure-portal-screenshot",
+      "captured": "2026-11-04",
+      "state": "second permanent-deletion confirmation dialog; first Delete alone did not start deletion",
+      "sourceProof": "live-validation-20261103.json",
+      "sourceMethod": "actual Portal confirmation dialog, before final submission; subsequent ARM state Deleting verified",
+      "removed": ["all content outside the confirmation dialog"],
+      "opaqueMasks": [],
+      "annotations": [],
+      "sha256": "2ebfb456c467b1f020e48a7c6468ef89d48d9af1c9ddc20153f3b3adf22487e5"
+    },
     "upload-flow.png": {
       "kind": "educational-diagram-not-portal",
       "source": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
@@ -317,20 +408,18 @@
     "cloud-shell/02-owned-prepare.png",
     "portal/00-rg-create.png",
     "portal/03-container-private.png",
-    "portal/04-identity-rbac.png",
     "portal/05-private-endpoint-dns.png",
     "portal/06-app-ingress.png",
-    "portal/07-delete-confirmation.png",
-    "portal/08-deletion-complete.png",
+    "portal/08-filtered-lists-empty.png",
     "portal/09-acr-build-run.png",
     "portal/10-owned-app-deployment.png"
   ],
   "packages": {
     "handson04-self-study.zip": {
       "kind": "learner-source-and-iac-bundle",
-      "sha256": "9bcce2495f62214a048103375f41dad0a458fac152c6b56b21ac636deb698d31",
+      "sha256": "68dcb6221dd08eebd78eb92a42b2f970da5089b42da1939897eb7027ce173af9",
       "files": {
-        "README.md": "d49513c268eb14184704e02cafdf58ace3372f925f91c4c6e7145ef3f30988b7",
+        "README.md": "e8c27264159f7f74ef37ded4a8374cddbe99576d7cef033035acb2e76cd40081",
         "app/.dockerignore": "b579f63d13c980a61b0bd270b11350a7a0e455f89c604d5d03d84a13af90e324",
         "app/Dockerfile": "4210936adf1324be090f75235d4bdbb8b32cb880994d2b2fd88dac20d78efb2e",
         "app/blob_viz/__init__.py": "21d0055d5e9909b61d25d7ef2ddad8e375935113743ebd86de403f44ae0830c1",

@@ -23,8 +23,13 @@
 `python3 setup_lab.py build --resume-run 実行番号`で記録へ戻せます。別タグの実行は受け付けません。
 
 **一時Cloud Shellでは、閉じるとファイルが消えます。**
-各段階の完了後、Manage files→Downloadから`.lab04-state.json`を手元に保存してください。
-再開時はZIPを展開し直し、同じフォルダーにその記録をUploadします。
+`init`・`prepare`・`build`・`deploy`の各段階の完了後、Manage files→Downloadから`.lab04-state.json`を手元に保存してください。
+入力欄の左にホームフォルダーが固定表示される場合は、入力部分に`handson04-self-study/.lab04-state.json`だけを入れます。
+ダウンロード通知に出るファイルリンクもクリックし、PCに保存されたことを確認します。保存名が`lab04-state.json`になる場合があります。
+再開時はZIPを展開し直し、作業フォルダーへ移動してから、最新の記録をUploadします。
+アップロード通知の宛先がホームフォルダーなら、保存名が`lab04-state.json`の場合は`cp ~/lab04-state.json .lab04-state.json`で戻します。
+保存名が異なる場合はコピー元だけを実際の名前に置き換え、コピー先は必ず`.lab04-state.json`にします。
+`ls -l .lab04-state.json`で存在を確認し、中断した段階を再実行します。再開時に`init`は実行しません。
 記録を失った場合は、Portalで作成済みのものを確認し、今回の自分のRGを削除してから新しく始めます。
 空でないRGでinitをやり直して上書きすることはできません。
 空でも前の作業タグが付いているRGは、記録を戻すか片付けてから始めます。

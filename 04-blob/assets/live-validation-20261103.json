@@ -1,0 +1,321 @@
+{
+  "date": "2026-11-03T14:57:17.095Z",
+  "method": "Actual participant ZIP uploaded to ephemeral Portal Bash Cloud Shell; init, prepare, remote ACR build and deploy; native browser file input populated from downloaded fictional samples. Not a manual OS dialog or an independent beginner test.",
+  "provisioning": {
+    "base": "Succeeded",
+    "acrRun": "Succeeded",
+    "acrRunId": "ce1",
+    "immutableDigest": true,
+    "app": "Succeeded",
+    "portalConfigurationVerified": true
+  },
+  "checks": [
+    {
+      "name": "actual Azure storage mode",
+      "passed": true,
+      "actual": "azure-blob"
+    },
+    {
+      "name": "not local test page",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "initial empty list",
+      "passed": true,
+      "actual": "保存済み 0 / 10件"
+    },
+    {
+      "name": "app sample download monthly-sales.csv",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "app sample download monthly-sales-updated.csv",
+      "passed": true,
+      "actual": "3d6f411759681ed7aea21474ca7b8cd6f61538b610b7445fa852dae593cc1bc1"
+    },
+    {
+      "name": "rows for 1020",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1020",
+      "passed": true,
+      "actual": "1,020"
+    },
+    {
+      "name": "maximum 240",
+      "passed": true,
+      "actual": "240"
+    },
+    {
+      "name": "six bars for 1020",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1020",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1020",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "basic table values",
+      "passed": true,
+      "actual": [
+        "100",
+        "160",
+        "120",
+        "180",
+        "220",
+        "240"
+      ]
+    },
+    {
+      "name": "saved Blob download bytes",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "rows for 1020",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1020",
+      "passed": true,
+      "actual": "1,020"
+    },
+    {
+      "name": "maximum 240",
+      "passed": true,
+      "actual": "240"
+    },
+    {
+      "name": "six bars for 1020",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1020",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1020",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "same ID after page reload",
+      "passed": true,
+      "actual": "file-01"
+    },
+    {
+      "name": "rows for 1020",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1020",
+      "passed": true,
+      "actual": "1,020"
+    },
+    {
+      "name": "maximum 240",
+      "passed": true,
+      "actual": "240"
+    },
+    {
+      "name": "six bars for 1020",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1020",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1020",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "same ID without shared cookies",
+      "passed": true,
+      "actual": "file-01"
+    },
+    {
+      "name": "rows for 1020",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1020",
+      "passed": true,
+      "actual": "1,020"
+    },
+    {
+      "name": "maximum 240",
+      "passed": true,
+      "actual": "240"
+    },
+    {
+      "name": "six bars for 1020",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1020",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1020",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "comparison uses different file ID",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "rows for 1080",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1080",
+      "passed": true,
+      "actual": "1,080"
+    },
+    {
+      "name": "maximum 300",
+      "passed": true,
+      "actual": "300"
+    },
+    {
+      "name": "six bars for 1080",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1080",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1080",
+      "passed": true,
+      "actual": "3d6f411759681ed7aea21474ca7b8cd6f61538b610b7445fa852dae593cc1bc1"
+    },
+    {
+      "name": "rows for 1020",
+      "passed": true,
+      "actual": "6"
+    },
+    {
+      "name": "total 1020",
+      "passed": true,
+      "actual": "1,020"
+    },
+    {
+      "name": "maximum 240",
+      "passed": true,
+      "actual": "240"
+    },
+    {
+      "name": "six bars for 1020",
+      "passed": true,
+      "actual": 6
+    },
+    {
+      "name": "Blob read source for 1020",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SHA for 1020",
+      "passed": true,
+      "actual": "1c75f4c79d14eee10e30b62ed4ecda60cf36716d981e9957a1f4240ef936b5e4"
+    },
+    {
+      "name": "invalid columns HTTP status",
+      "passed": true,
+      "actual": 400
+    },
+    {
+      "name": "invalid file did not increase count",
+      "passed": true,
+      "actual": "保存済み 2 / 10件"
+    },
+    {
+      "name": "zero files after both UI deletions and reopen",
+      "passed": true,
+      "actual": "保存済み 0 / 10件"
+    },
+    {
+      "name": "no page JavaScript errors",
+      "passed": true,
+      "actual": []
+    }
+  ],
+  "cleanup": {
+    "status": "completed",
+    "separateUserApproval": true,
+    "method": "Portal RG name confirmation followed by the second permanent-deletion dialog; no direct managed-RG delete",
+    "acceptedAt": "2026-11-04T06:09:43.219Z",
+    "observedAt": "2026-11-04T06:36:19.963386+00:00",
+    "participantGroupExists": false,
+    "managedGroupExists": false,
+    "portalSuccessNotification": true,
+    "participantCheckCleanup": "both-groups-deleted",
+    "subscriptionAuditNamedResourcesRemaining": 0,
+    "portalLists": [
+      {
+        "list": "resourceGroups",
+        "filteredCount": 0
+      },
+      {
+        "list": "Microsoft.App/containerApps",
+        "filteredCount": 0
+      },
+      {
+        "list": "Microsoft.App/managedEnvironments",
+        "filteredCount": 0
+      },
+      {
+        "list": "Microsoft.Storage/storageAccounts",
+        "filteredCount": 0
+      },
+      {
+        "list": "Microsoft.ContainerRegistry/registries",
+        "filteredCount": 0
+      }
+    ]
+  },
+  "independentBlobSdkReadThisRun": false,
+  "appChecksPassed": true,
+  "appChecksFinished": "2026-11-03T14:57:26.093Z",
+  "stateRecovery": {
+    "newEphemeralSession": true,
+    "latestStateRestoredByteForByte": true,
+    "incompleteCleanupCorrectlyRejected": true
+  },
+  "limitations": [
+    "Not an independent beginner usability test",
+    "App CSV file input was automated, not a manual OS dialog",
+    "No independent Blob SDK job this run",
+    "Actual billing not measured; sign-in/approval waits extended execution into the next day"
+  ],
+  "completedAt": "2026-11-04T06:38:28.778366+00:00",
+  "passed": true
+}
