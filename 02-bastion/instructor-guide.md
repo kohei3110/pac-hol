@@ -42,10 +42,10 @@ RG、VNet、VM、Bastion、公開IPは参加者が作成し、最後に自分の
 5. 接続には、VM・VMのNIC・Bastionに対するReader相当の閲覧権限と、VM内の認証が必要です。
    今回はSSH鍵でログインするため、Entra IDログイン用の拡張機能やVM Loginロールは追加しません。
 6. 参加者のPCでRSA鍵をダウンロードし、接続時にファイルを選択できるか確認します。PortalとBastionのHTTPS・WebSocket通信も確認してください。
-7. Ubuntu 24.04 x64 Gen2、Standard_D2alds_v6（2 vCPU・4 GiB）、Trusted launch、Standard HDD LRS、高速ネットワーク有効を利用できるか確認します。
-   Standard HDDのOSディスクは2028年9月8日に廃止予定です。今回は短期実習として検証しましたが、継続開催時にはSSDへの変更と費用・画像の更新を検討してください。
+7. Ubuntu 24.04 x64 Gen2、Standard_D2alds_v6（2 vCPU・4 GiB）、Trusted launch、Standard SSD LRS、高速ネットワーク有効を利用できるか確認します。
+   OSディスクは検証用としてStandard SSD LRSを選びます。本番環境では読み書き性能や応答速度を重視してPremium SSDがよく使われますが、必要な性能と費用に応じて選ぶことを説明してください。この実習ではPremium SSDには変更しません。
    Japan EastでのBastion作成では、公開IPをStandard・静的・IPv4の**ゾーン冗長**にします。2026-11-02には公開IPの「ゾーンがありません」で`InvalidAvailabilityZone`が発生しました。Bastion本体のNoneとは区別してください。
-8. 費用を見積もります。Basicの公開価格の例は$0.19/時ですが、契約・通貨・課金単位による違いと、ディスク・IP・転送・ポリシーで有効になる有料サービスの費用も確認してください。
+8. 費用を見積もります。Basicの公開価格の例は$0.19/時ですが、契約・通貨・課金単位による違いと、OSディスク（Standard SSD LRS）・IP・転送・ポリシーで有効になる有料サービスの費用も確認してください。
    参加者数と、デプロイ・削除の待ち時間も含めて計算します。共有Bastionは使わず、本人が自分のものを片付ける構成にします。
 9. 開催用のPortalで、BasicとRSA鍵を使って、作成からログイン・コマンド実行・削除まで一度通して試します。
    CLIでBastionを作れたことや、NSGの設定が正しいことだけでは、ブラウザーでログインできるかは分かりません。

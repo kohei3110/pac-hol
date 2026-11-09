@@ -10,7 +10,7 @@ VMには公開IPを付けず、Bastion経由で接続します。接続後はコ
 対象: Azureを初めて操作する人。第1回を実施していなくても、この手順から始められます  
 目安: **90〜120分＋予備15分**（VM・Bastionの作成、削除の待ち時間を含む。初学者による所要時間の実測は未実施）  
 操作: Azure Portalと、Bastionで接続したVMのLinux画面を使います。PCへのAzure CLI・SSHソフトのインストールは不要です  
-更新日: 2026-11-02 ／ [共通の始め方と名前](../self-study.md) <span class="no-print">／ [実施記録](run-through.md)</span>
+更新日: 2026-11-09 ／ [共通の始め方と名前](../self-study.md) <span class="no-print">／ [実施記録](run-through.md)</span>
 
 > **Bastion Basicは、接続していなくても料金がかかります。**
 > VMを停止したり、ブラウザーを閉じたりしても、Bastionの課金は止まりません。
@@ -45,7 +45,7 @@ Reader（閲覧者）権限では、リソースを作成できません。RGの
 権限・ポリシー・ロックに関するエラーは、設定を変更せず主催者に相談してください。
 
 **費用の目安:** 作成前に、利用するリージョンと契約での **Linux Standard_D2alds_v6**、**Bastion Basic**、**Standard IPv4公開IP**の時間単価をPortalまたは[料金計算ツール](https://azure.microsoft.com/pricing/calculator/)で確認します。
-この3つを2時間ずつ使う場合は、**（VMの時間単価＋Bastion Basicの時間単価＋公開IPの時間単価）×2時間 ＋ ディスク・転送・追加サービス・税など**で見積もります。
+この3つを2時間ずつ使う場合は、**（VMの時間単価＋Bastion Basicの時間単価＋公開IPの時間単価）×2時間 ＋ OSディスク（Standard SSD LRS）・転送・追加サービス・税など**で見積もります。
 以前のB1sの単価や合計額は、今回のサイズには使いません。契約、通貨、利用時間、課金単位によって請求額は変わるので、見積もりは上限額ではありません。
 予算には、接続していない時間や作成・削除の待ち時間も含める必要があります。主催者に確認してください。
 
@@ -193,9 +193,9 @@ RSAと受信ポートの選択は、第1回と同じです。
 
 ### Task 4 — VMのディスク・ネットワークを設定して作成する（8分）
 
-1. **ディスク**で、OSディスクを **Standard HDD LRS**にします。容量はイメージの既定値（30〜32 GiB程度）を使い、データディスクは追加しません。
+1. **ディスク**で、OSディスクを **Standard SSD LRS** にします。容量はイメージの既定値（30〜32 GiB程度）を使い、データディスクは追加しません。
+   今回は**検証用としてStandard SSDを使います**。**本番環境では、読み書き性能や応答速度を重視してPremium SSDがよく使われます**。本番用のディスクは必要な性能と費用に応じて選びますが、この実習ではPremium SSDには変更しません。
    **VMと共に削除**はオン、**Ultra Diskの互換性を有効にする**はオフ（選択不可ならそのまま）、**キーの管理**は**プラットフォームマネージドキー**です。ディスク暗号化用のキーとSSHキーは別です。
-   **Standard HDDのOSディスクは2028年9月8日に廃止予定**のため、Portalに警告が表示されることがあります。今回は短時間で削除する実習として、この構成を確認しています。長期利用向けの推奨ではありません。主催者がSSDを指定する場合は、費用と手順を確認してから変更します。
 2. **ネットワーク**で、Task 2で作った**自分のVNet**と、サブネット **`snet-vm`** を選びます。
    **VMの配置先に `AzureBastionSubnet` を選ばないでください。**
 3. **パブリックIP**を「なし」にします。パブリック受信ポート「なし」とは別の設定です。
@@ -481,7 +481,7 @@ PCからBastionまでは443番ポート、BastionからLinux VMまでは22番ポ
 - [Linux VMへのブラウザーSSHとRSA鍵の要件](https://learn.microsoft.com/en-us/azure/bastion/bastion-connect-vm-ssh-linux)
 - [Bastionの専用サブネットと公開IP](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings)
 - [公開IPの可用性ゾーン](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#availability-zone)
-- [Standard HDDのOSディスク廃止予定](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-hdd-os-retirement)
+- [Standard SSD・Premium SSDの用途と性能](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types)
 - [BastionのNSG規則](https://learn.microsoft.com/en-us/azure/bastion/bastion-nsg)
 - [SKU・機能・リージョンの違い](https://learn.microsoft.com/en-us/azure/bastion/bastion-sku-comparison)
 - [VMの状態と課金](https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing)
