@@ -1,0 +1,254 @@
+{
+  "date": "2026-11-15",
+  "content": {
+    "method": "Full independently rendered Markdown/HTML comparison; every participant/common text block located in actual PDF raw text",
+    "normalization": [
+      "Unicode NFKC",
+      "whitespace removal",
+      "soft hyphen removal"
+    ],
+    "sections": [
+      {
+        "section": "participant",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacters": 15461,
+        "pdfTextBlocks": 351,
+        "pdfMissingBlocks": 0
+      },
+      {
+        "section": "instructor",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacters": 4811
+      },
+      {
+        "section": "validation",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacters": 9387
+      },
+      {
+        "section": "screenshots",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacters": 3245
+      },
+      {
+        "section": "self-study",
+        "markdownHtmlTextEqual": true,
+        "normalizedCharacters": 3486,
+        "pdfTextBlocks": 99,
+        "pdfMissingBlocks": 0
+      }
+    ],
+    "missingPdfText": [],
+    "pdfPages": 26,
+    "pdfImages": 12,
+    "expectedPdfImages": 12,
+    "manifestHashErrors": [],
+    "artifactSha256": {
+      "guide.md": "02b07ff75896e421eaa0fdb84a258339db868b9c58cbc626553d33771f371341",
+      "guide.html": "bfc1dff5f633c958474c61178d5cdcbebb33eaf044140b88b8fb28045a888a43",
+      "guide.pdf": "539038d1cf4b13135de5cee66ca3f39ffab39203dd79486943de1812786b93af"
+    },
+    "passed": true
+  },
+  "dom": {
+    "at": "2026-11-15T13:37:41.233Z",
+    "method": "Fresh local HTML DOM/control/print checks in isolated Chrome; separate from Azure evidence",
+    "observations": [
+      {
+        "width": 390,
+        "theme": "light",
+        "scrollWidth": 390,
+        "missingImages": 0,
+        "brokenAnchors": [],
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mathSpans": 0,
+        "rawEmphasis": false,
+        "costTextPresent": true,
+        "currentDatePresent": true
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "scrollWidth": 390,
+        "missingImages": 0,
+        "brokenAnchors": [],
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mathSpans": 0,
+        "rawEmphasis": false,
+        "costTextPresent": true,
+        "currentDatePresent": true
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "scrollWidth": 1440,
+        "missingImages": 0,
+        "brokenAnchors": [],
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mathSpans": 0,
+        "rawEmphasis": false,
+        "costTextPresent": true,
+        "currentDatePresent": true
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "scrollWidth": 1440,
+        "missingImages": 0,
+        "brokenAnchors": [],
+        "taskNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "mathSpans": 0,
+        "rawEmphasis": false,
+        "costTextPresent": true,
+        "currentDatePresent": true
+      }
+    ],
+    "checked": true,
+    "reset": true,
+    "imageOpens": true,
+    "imageCloses": true,
+    "print": {
+      "participantVisible": true,
+      "supplementsHidden": true,
+      "commonInstructionsVisible": true,
+      "closedAnswerIncluded": true
+    },
+    "errors": [],
+    "passed": true
+  },
+  "visual": {
+    "date": "2026-11-15",
+    "method": "Rendered all 26 PDF pages with pdftoppm and visually reviewed paired page images. After the final wording changes, rendered the entire final PDF again: 22 pages were pixel-identical to reviewed pages; final pages 14-17 were independently viewed again.",
+    "pdfSha256": "539038d1cf4b13135de5cee66ca3f39ffab39203dd79486943de1812786b93af",
+    "pageCount": 26,
+    "reviewedPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "pixelIdenticalToReviewedPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "finalChangedPagesViewed": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "findings": {
+      "paragraphSplitAcrossPagesFixed": true,
+      "costTextReadable": true,
+      "revisionAndLabelInstructionsReadable": true,
+      "tablesAndImagesNotClipped": true,
+      "closedAnswerVisibleInPrint": true,
+      "commonInstructionsVisibleInPrint": true
+    },
+    "passed": true
+  },
+  "generatorTests": {
+    "command": "python3 -m unittest discover -s tools -p 'test_rebuild_guides.py' -q",
+    "passed": true,
+    "tests": 3
+  },
+  "azureEvidenceSeparate": "live-validation-20261115.json",
+  "limitations": [
+    "Agent editorial walkthrough, not unaided beginner usability research"
+  ],
+  "passed": true
+}

@@ -1,0 +1,461 @@
+{
+  "date": "2026-11-15",
+  "method": "Fresh user-approved isolated Portal walkthrough; CLI/ARM validation and read-only corroboration; not a replay of prior evidence",
+  "region": "japaneast",
+  "preflight": {
+    "bicepBuild": "passed",
+    "armValidate": "Succeeded",
+    "whatIf": {
+      "status": "Succeeded",
+      "create": 3,
+      "modify": 0,
+      "delete": 0,
+      "outsideScope": 0
+    },
+    "mcrDigests": {
+      "fb699ef": "sha256:d5eb42ced9fe4c735368da51238348c352887d8e5fffae8b072d7927f1d73",
+      "c6f1515": "sha256:d76376049baca9ccdf831f78f93c9640079f3201cc2dcde76a1347f0b8e9155f"
+    }
+  },
+  "portalOperations": [
+    "create RG",
+    "create environment and old app",
+    "scale to 0/1 and recheck tags",
+    "Multiple and pin old concrete revision",
+    "create v2",
+    "save preview label",
+    "switch new 100%",
+    "rollback old 100%",
+    "delete exact RG with extra confirmation"
+  ],
+  "finalConfigurationBeforeCleanup": {
+    "mode": "Multiple",
+    "profile": "Consumption",
+    "revisions": [
+      {
+        "alias": "old--0000001",
+        "active": true,
+        "image": "mcr.microsoft.com/k8se/samples/test-app:fb699ef",
+        "displayVersion": "fb699ef",
+        "cpu": 0.25,
+        "memory": "0.5Gi",
+        "minReplicas": 0,
+        "maxReplicas": 1,
+        "finalTrafficWeight": 100
+      },
+      {
+        "alias": "new--v2",
+        "active": true,
+        "image": "mcr.microsoft.com/k8se/samples/test-app:c6f1515",
+        "displayVersion": "c6f1515",
+        "cpu": 0.25,
+        "memory": "0.5Gi",
+        "minReplicas": 0,
+        "maxReplicas": 1,
+        "finalTrafficWeight": 0
+      }
+    ],
+    "externalIngress": true,
+    "targetPort": 80,
+    "allowInsecure": false,
+    "sessionAffinity": "none",
+    "logDestination": null,
+    "vnet": null,
+    "zoneRedundant": false,
+    "identity": "None",
+    "registryCredentials": false,
+    "secrets": false,
+    "rgAndAppTagsVerified": true,
+    "environmentTagsNotInherited": true,
+    "resourcesInOwnedRG": 2,
+    "newRbacAssignments": 0
+  },
+  "http": [
+    {
+      "stage": "initial",
+      "expectedVersion": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "at": "2026-11-15T13:01:37.029Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:01:42.088Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:01:47.161Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "pinned",
+      "expectedVersion": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "at": "2026-11-15T13:04:11.572Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:04:16.674Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:04:21.737Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "still-old",
+      "expectedVersion": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "at": "2026-11-15T13:07:33.042Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:07:38.224Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:07:43.347Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "preview",
+      "expectedVersion": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "at": "2026-11-15T13:08:10.405Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:15.503Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:20.708Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "switched-new",
+      "expectedVersion": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "at": "2026-11-15T13:08:29.094Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:08:34.163Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:08:39.254Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:44.315Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:49.382Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "preview-after-switch",
+      "expectedVersion": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "at": "2026-11-15T13:08:49.756Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:54.820Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:08:59.883Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "rollback",
+      "expectedVersion": "fb699ef",
+      "expectedRevision": "old--0000001",
+      "observations": [
+        {
+          "at": "2026-11-15T13:09:08.640Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:09:13.778Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:09:18.863Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:09:23.931Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        },
+        {
+          "at": "2026-11-15T13:09:28.982Z",
+          "status": 200,
+          "version": "fb699ef",
+          "revision": "old--0000001"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "stage": "preview-after-rollback",
+      "expectedVersion": "c6f1515",
+      "expectedRevision": "new--v2",
+      "observations": [
+        {
+          "at": "2026-11-15T13:09:29.136Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:09:34.201Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        },
+        {
+          "at": "2026-11-15T13:09:39.302Z",
+          "status": 200,
+          "version": "c6f1515",
+          "revision": "new--v2"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "cleanup": {
+    "startedAt": "2026-11-15T13:11:29.260Z",
+    "method": "Portal exact RG name plus additional deletion confirmation",
+    "api": {
+      "method": "Explicit subscription RG existence and subscription-scoped app/environment REST inventory",
+      "observations": [
+        {
+          "at": "2026-11-15T13:11:51.558164+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:12:52.479145+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:13:53.279697+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:14:54.199505+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:15:55.020190+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:16:55.741992+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:17:56.624156+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:18:57.923546+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:19:58.868961+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:20:59.673246+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:22:00.459211+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:23:01.189690+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:24:02.018479+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:25:03.839758+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:26:04.784966+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:27:05.609767+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:28:06.839076+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:29:07.682559+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:30:08.523280+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:31:09.297368+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:32:09.941154+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:33:10.577496+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:34:11.542249+00:00",
+          "rgExists": true
+        },
+        {
+          "at": "2026-11-15T13:35:13.336633+00:00",
+          "rgExists": false
+        }
+      ],
+      "matchingResources": {
+        "containerApps": [],
+        "managedEnvironments": []
+      },
+      "passed": true
+    },
+    "portal": {
+      "at": "2026-11-15T13:35:43.489Z",
+      "inventories": [
+        {
+          "kind": "resourceGroups",
+          "subscriptionFilterVerified": true,
+          "ownedNameFilterVerified": true,
+          "refreshed": true,
+          "status": "0/0 を表示中",
+          "matchingRows": 0
+        },
+        {
+          "kind": "containerApps",
+          "at": "2026-11-15T13:36:55.918Z",
+          "subscriptionFilterVerified": true,
+          "ownedNameFilterVerified": true,
+          "refreshed": true,
+          "loadingComplete": true,
+          "status": "0/0 を表示中",
+          "matchingRows": 0
+        },
+        {
+          "kind": "managedEnvironments",
+          "at": "2026-11-15T13:37:10.599Z",
+          "subscriptionFilterVerified": true,
+          "ownedNameFilterVerified": true,
+          "refreshed": true,
+          "loadingComplete": true,
+          "status": "0/0 を表示中",
+          "matchingRows": 0
+        }
+      ],
+      "passed": true,
+      "deletionSuccessNotification": true,
+      "deletionFailureNotification": false
+    }
+  },
+  "limitations": [
+    "No unaided beginner user test",
+    "No new shared-PowerPoint validation",
+    "No measured invoice or spending cap",
+    "Older screenshots remain explicitly dated"
+  ],
+  "redaction": "No real endpoints, subscription IDs, account identities, full environment dumps or credentials; revision names aliased",
+  "passed": true
+}
